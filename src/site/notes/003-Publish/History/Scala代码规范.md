@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Scala代码规范.md","permalink":"/History/Scala代码规范/","title":"Scala代码规范","tags":["技术","Scala","Spark"],"created":"2024-12-11T18:09:35.726+08:00","updated":"2024-12-11T18:09:35.726+08:00"}
+{"dg-publish":true,"permalink":"/003-Publish/History/Scala代码规范/","title":"Scala代码规范","tags":["技术","Scala","Spark"],"created":"2024-12-11T18:09:35.726+08:00","updated":"2024-12-11T18:09:35.726+08:00"}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Android构架系列之二-常见框架分析.md","permalink":"/History/Android构架系列之二-常见框架分析/","title":"Android构架系列之二--常见框架分析(一）","tags":["技术","Android","主框架"],"created":"2024-12-11T18:09:35.734+08:00","updated":"2024-12-11T18:09:35.734+08:00"}
+{"dg-publish":true,"permalink":"/003-Publish/History/Android构架系列之二-常见框架分析/","title":"Android构架系列之二--常见框架分析(一）","tags":["技术","Android","主框架"],"created":"2024-12-11T18:09:35.734+08:00","updated":"2024-12-11T18:09:35.734+08:00"}
 ---
 
 

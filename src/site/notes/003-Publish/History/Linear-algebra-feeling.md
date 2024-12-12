@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Linear-algebra-feeling.md","permalink":"/History/Linear-algebra-feeling/","title":"线性代数的直觉","tags":["技术","机器学习","数学"],"created":"2024-12-11T18:09:35.720+08:00","updated":"2024-12-11T18:09:35.720+08:00"}
+{"dg-publish":true,"permalink":"/003-Publish/History/Linear-algebra-feeling/","title":"线性代数的直觉","tags":["技术","机器学习","数学"],"created":"2024-12-11T18:09:35.720+08:00","updated":"2024-12-11T18:09:35.720+08:00"}
 ---
 
 

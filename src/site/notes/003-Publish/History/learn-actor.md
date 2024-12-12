@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/learn-actor.md","permalink":"/History/learn-actor/","title":"初识Actor - 从Scala库开始","tags":["技术","编程模型","Scala"],"created":"2024-12-11T18:09:35.722+08:00","updated":"2024-12-11T18:09:35.722+08:00"}
+{"dg-publish":true,"permalink":"/003-Publish/History/learn-actor/","title":"初识Actor - 从Scala库开始","tags":["技术","编程模型","Scala"],"created":"2024-12-11T18:09:35.722+08:00","updated":"2024-12-11T18:09:35.722+08:00"}
 ---
 
 

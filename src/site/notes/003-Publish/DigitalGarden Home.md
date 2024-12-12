@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"DigitalGarden Home.md","permalink":"/DigitalGarden Home/","title":"DigitalGarden Home","tags":["gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry"],"created":"2024-12-10T16:29:08.702+08:00","updated":"2024-12-11T22:56:48.365+08:00"}
+{"dg-publish":true,"permalink":"/003-Publish/DigitalGarden Home/","title":"DigitalGarden Home","tags":["gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry"],"created":"2024-12-10T16:29:08.702+08:00","updated":"2024-12-11T22:56:48.365+08:00"}
 ---
 
 # DigitalGarden Home
@@ -42,6 +42,7 @@
     - [[003-Publish/History/nodejs进阶与express框架\|Node.js进阶与Express框架及知识图谱]]
     - [[003-Publish/History/nodejs基础学习与知识图谱\|Node.js基础学习与知识图谱]]
     - [[003-Publish/History/JS相关API与Lib学习笔记与知识图谱\|JS相关API/Lib学习笔记与知识图谱]]
+    - [[003-Publish/History/JavaScript语言学习笔记与知识图谱\|JavaScript语言学习笔记与知识图谱]]
     - [[003-Publish/History/CSS与HTML学习笔记与知识图谱\|CSS与HTML学习笔记与知识图谱]]
     - [[003-Publish/History/全沾Growth工程师学习计划\|全沾Growth工程师学习计划]]
     - [[003-Publish/History/版本控制工具git入门实践\|版本控制工具Git入门实践]]
