@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/DigitalGarden Home/","title":"DigitalGarden Home","tags":["gardenEntry","gardenEntry"],"created":"2024-12-10T16:29:08.702+08:00","updated":"2024-12-11T22:56:48.365+08:00"}
+{"dg-publish":true,"dg-path":"DigitalGarden Home.md","permalink":"/DigitalGarden Home/","title":"DigitalGarden Home","tags":["gardenEntry","gardenEntry","gardenEntry"],"created":"2024-12-10T16:29:08.702+08:00","updated":"2024-12-11T22:56:48.365+08:00"}
 ---
 
 # DigitalGarden Home

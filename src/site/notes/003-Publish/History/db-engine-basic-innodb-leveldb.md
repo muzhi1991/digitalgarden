@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/History/db-engine-basic-innodb-leveldb/","title":"数据库引擎InnoDB vs LevelDB","tags":["技术","数据库"],"created":"2024-12-11T18:09:35.718+08:00","updated":"2024-12-11T18:09:35.719+08:00"}
+{"dg-publish":true,"dg-path":"History/db-engine-basic-innodb-leveldb.md","permalink":"/History/db-engine-basic-innodb-leveldb/","title":"数据库引擎InnoDB vs LevelDB","tags":["技术","数据库"],"created":"2024-12-11T18:09:35.718+08:00","updated":"2024-12-11T18:09:35.719+08:00"}
 ---
 
 
