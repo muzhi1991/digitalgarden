@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"DigitalGarden Home.md","permalink":"/DigitalGarden Home/","title":"DigitalGarden Home","tags":["gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry"],"created":"2024-12-10T16:29:08.702+08:00","updated":"2024-12-11T22:56:48.365+08:00"}
+{"dg-publish":true,"dg-path":"DigitalGarden Home.md","permalink":"/DigitalGarden Home/","title":"DigitalGarden Home","tags":["gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry","gardenEntry"],"created":"2024-12-10T16:29:08.702+08:00","updated":"2024-12-11T22:56:48.365+08:00"}
 ---
 
 # DigitalGarden Home
@@ -23,6 +23,7 @@
 - 2017: 
     - [[003-Publish/History/cardinality-counting\|大数据算法：基数统计]]
     - [[003-Publish/History/Scala代码规范\|Scala代码规范]]
+    - [[003-Publish/History/深度学习系列1-数据科学开发环境与工具\|深度学习系列（一）——数据科学开发环境与工具]]
     - [[003-Publish/History/深度学习入门课程概要\|深度学习入门概要]]
     - [[003-Publish/History/流式超越批量-Streaming 102翻译\|流式超越批量：Streaming 102翻译]]
     - [[003-Publish/History/Spark入门--配置与API编程\|Spark入门--配置与API编程]]
