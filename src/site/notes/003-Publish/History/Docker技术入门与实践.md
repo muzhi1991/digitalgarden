@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/History/Docker技术入门与实践/","title":"常见Web架构与Docker部署实践","tags":["技术","全栈","运维"],"created":"2024-12-11T18:09:35.727+08:00","updated":"2024-12-11T18:09:35.728+08:00"}
+{"dg-publish":true,"permalink":"/003-Publish/History/Docker技术入门与实践/","title":"常见Web架构与Docker部署实践","tags":["技术","全栈","运维"],"created":"2024-12-11T18:09:35.727+08:00","updated":"2024-12-12T11:24:37.669+08:00"}
 ---
 
 
@@ -248,7 +248,8 @@ server {
 
     * 结构图
 
-      ![](https://yeasy.gitbooks.io/docker_practice/content/_images/network.png)
+     ![image.png](http://fodi.limuzhi.us.kg/images/IMG-9790f6c962b98ed0.webp)
+
 * 基本操作：可以参考[这个指南](https://www.gitbook.com/book/yeasy/docker_practice)
   * **查看所有镜像**：`docker images`
   * **查看所有容器**（运行的，停止的）：`docker ps`

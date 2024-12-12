@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/History/Spark入门--配置与API编程/","title":"Spark入门--配置与API编程","tags":["技术","大数据分析","Spark"],"created":"2024-12-11T18:09:35.738+08:00","updated":"2024-12-11T22:47:27.309+08:00"}
+{"dg-publish":true,"permalink":"/003-Publish/History/Spark入门--配置与API编程/","title":"Spark入门--配置与API编程","tags":["技术","大数据分析","Spark"],"created":"2024-12-11T18:09:35.738+08:00","updated":"2024-12-12T11:26:30.644+08:00"}
 ---
 
 
@@ -48,7 +48,7 @@ Spark能完成的一些任务：
 
 * Client Mode 与 Cluster Mode：两者最大的区别是Driver程序的位置。如果Driver在本地则是Client Mode（典型地，交互式应用Spark Shell）。如果Driver在集群中的某个Node运行，则是Cluster模式。（对于Yarn模式的Client，Driver在Application Master中）
 
-  ![Cluster Mode(Cluster Manager is standalone/Yarn/Mesos)](http://spark.apache.org/docs/latest/img/cluster-overview.png)
+  ![](http://fodi.limuzhi.us.kg/images/IMG-2589dfa89e201c67.webp)
 
 * Application && Job && Stage && Task：这几个概念十分容易混淆，从左到右由大变小。
 
