@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/History/fp-scala-part1/","title":"Scala函数式编程-Part1","tags":["技术","Scala","函数式编程"],"created":"2024-12-11T18:09:35.707+08:00","updated":"2024-12-11T18:09:35.708+08:00"}
+{"dg-publish":true,"dg-path":"History/fp-scala-part1.md","permalink":"/History/fp-scala-part1/","title":"Scala函数式编程-Part1","tags":["技术","Scala","函数式编程"],"created":"2024-12-11T18:09:35.707+08:00","updated":"2024-12-11T18:09:35.708+08:00"}
 ---
 
 

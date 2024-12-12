@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/History/Android图片库-Glide/","title":"Android图片库--Glide Wiki中文翻译","tags":["技术","Android","主框架"],"created":"2024-12-11T18:09:35.709+08:00","updated":"2024-12-11T18:09:35.710+08:00"}
+{"dg-publish":true,"dg-path":"History/Android图片库-Glide.md","permalink":"/History/Android图片库-Glide/","title":"Android图片库--Glide Wiki中文翻译","tags":["技术","Android","主框架"],"created":"2024-12-11T18:09:35.709+08:00","updated":"2024-12-11T18:09:35.710+08:00"}
 ---
 
 

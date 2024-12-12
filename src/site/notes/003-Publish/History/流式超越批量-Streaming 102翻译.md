@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/History/流式超越批量-Streaming 102翻译/","title":"流式超越批量：Streaming 102翻译","tags":["技术","流式计算","大数据分析","Spark","翻译"],"created":"2024-12-11T18:09:35.717+08:00","updated":"2024-12-12T11:19:54.646+08:00"}
+{"dg-publish":true,"dg-path":"History/流式超越批量-Streaming 102翻译.md","permalink":"/History/流式超越批量-Streaming 102翻译/","title":"流式超越批量：Streaming 102翻译","tags":["技术","流式计算","大数据分析","Spark","翻译"],"created":"2024-12-11T18:09:35.717+08:00","updated":"2024-12-12T11:19:54.646+08:00"}
 ---
 
 ---

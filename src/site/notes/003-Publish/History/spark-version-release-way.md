@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/History/spark-version-release-way/","title":"Spark项目发布模式&&各个版本特性（持续更新）","tags":["技术","大数据","Spark"],"created":"2024-12-11T18:09:35.721+08:00","updated":"2024-12-11T18:09:35.721+08:00"}
+{"dg-publish":true,"dg-path":"History/spark-version-release-way.md","permalink":"/History/spark-version-release-way/","title":"Spark项目发布模式&&各个版本特性（持续更新）","tags":["技术","大数据","Spark"],"created":"2024-12-11T18:09:35.721+08:00","updated":"2024-12-11T18:09:35.721+08:00"}
 ---
 
 

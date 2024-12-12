@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/003-Publish/History/Android注入框架Dagger2学习笔记/","title":"Android注入框架Dagger2学习笔记","tags":["技术","Android","主框架"],"created":"2024-12-11T18:09:35.723+08:00","updated":"2024-12-11T18:09:35.723+08:00"}
+{"dg-publish":true,"dg-path":"History/Android注入框架Dagger2学习笔记.md","permalink":"/History/Android注入框架Dagger2学习笔记/","title":"Android注入框架Dagger2学习笔记","tags":["技术","Android","主框架"],"created":"2024-12-11T18:09:35.723+08:00","updated":"2024-12-11T18:09:35.723+08:00"}
 ---
 
 
