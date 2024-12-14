@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Android构架系列之三-数据库ORM框架.md","permalink":"/History/Android构架系列之三-数据库ORM框架/","title":"Android构架系列之三--数据库ORM框架","tags":["技术","Android","主框架"],"created":"2024-12-11T18:09:35.736+08:00","updated":"2024-12-11T18:09:35.737+08:00"}
+{"dg-publish":true,"dg-path":"History/Android构架系列之三-数据库ORM框架.md","permalink":"/History/Android构架系列之三-数据库ORM框架/","title":"Android构架系列之三--数据库ORM框架","tags":["技术","Android","主框架"],"created":"2016-04-10 21:09:42","updated":"2016-04-10 21:09:42"}
 ---
 
 

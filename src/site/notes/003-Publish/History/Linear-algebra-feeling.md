@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Linear-algebra-feeling.md","permalink":"/History/Linear-algebra-feeling/","title":"线性代数的直觉","tags":["技术","机器学习","数学"],"created":"2024-12-11T18:09:35.720+08:00","updated":"2024-12-11T18:09:35.720+08:00"}
+{"dg-publish":true,"dg-path":"History/Linear-algebra-feeling.md","permalink":"/History/Linear-algebra-feeling/","title":"线性代数的直觉","tags":["技术","机器学习","数学"],"created":"2018-07-15 19:41:20","updated":"2018-07-15 19:41:20"}
 ---
 
 
@@ -85,7 +85,7 @@
 * 在数学中：
 
   * 向量是一个抽象的概念（他满足某些约束就是向量）
-  * 但是，这里我们从**几何视角**看待它：是用来表示空间中**以原点为起点**，以$ \begin{bmatrix} -2  \\  3  \end{bmatrix} $该点为终点的一个箭头（与物理视角不同，他是有固定起点的），他表示，从原点出发，先沿着x轴前进-2个单位长度，再接着像y轴方向前进3个单位长度。
+  * 但是，这里我们从**几何视角**看待它：是用来表示空间中**以原点为起点**，以$\begin{bmatrix} -2  \\  3  \end{bmatrix}$该点为终点的一个箭头（与物理视角不同，他是有固定起点的），他表示，从原点出发，先沿着x轴前进-2个单位长度，再接着像y轴方向前进3个单位长度。
 
   <img src="http://fodi.limuzhi.us.kg/images/IMG-b5e65438046d9e95.webp" width=512 />
 

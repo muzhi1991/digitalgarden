@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/ml-notes-about-andrewng.md","permalink":"/History/ml-notes-about-andrewng/","title":"机器学习学习笔记-AndrewNg公开课","tags":["技术","机器学习","算法","学习笔记"],"created":"2024-12-11T18:09:35.743+08:00","updated":"2024-12-11T18:09:35.744+08:00"}
+{"dg-publish":true,"dg-path":"History/ml-notes-about-andrewng.md","permalink":"/History/ml-notes-about-andrewng/","title":"机器学习学习笔记-AndrewNg公开课","tags":["技术","机器学习","算法","学习笔记"],"created":"2019-03-24 17:33:01","updated":"2019-03-24 17:33:01"}
 ---
 
 

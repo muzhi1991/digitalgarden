@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Android构架系列之一-工程结构与Gradle配置.md","permalink":"/History/Android构架系列之一-工程结构与Gradle配置/","title":"Android构架系列之一--工程结构与Gradle配置","tags":["技术","Android","主框架"],"created":"2024-12-11T18:09:35.735+08:00","updated":"2024-12-11T18:09:35.735+08:00"}
+{"dg-publish":true,"dg-path":"History/Android构架系列之一-工程结构与Gradle配置.md","permalink":"/History/Android构架系列之一-工程结构与Gradle配置/","title":"Android构架系列之一--工程结构与Gradle配置","tags":["技术","Android","主框架"],"created":"2016-03-27 13:51:46","updated":"2016-03-27 13:51:46"}
 ---
 
 
