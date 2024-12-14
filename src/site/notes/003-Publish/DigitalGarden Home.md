@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"DigitalGarden Home.md","permalink":"/DigitalGarden Home/","title":"DigitalGarden Home","tags":["gardenEntry","gardenEntry","gardenEntry"],"created":"2024-12-10 16:29:08","updated":"2024-12-10 16:51:34"}
+{"dg-publish":true,"dg-path":"DigitalGarden Home.md","permalink":"/DigitalGarden Home/","title":"DigitalGarden Home","tags":["gardenEntry","gardenEntry","gardenEntry","gardenEntry"],"created":"2024-12-10 16:29:08","updated":"2024-12-10 16:51:34"}
 ---
 
 # DigitalGarden Home
@@ -13,7 +13,7 @@
 
 - 2018: 
     - [[003-Publish/History/spark-source-analyse-05\|Spark源码分析-0.5最初版本]]
-    - [[003-Publish/History/Linear-algebra-feeling\|线性代数的直觉]]
+    - [[003-Publish/History/Linear-algebra-feeling\|Linear-algebra-feeling]]
     - [[003-Publish/History/spark-paper\|Spark论文阅读]]
     - [[003-Publish/History/db-engine-basic-innodb-leveldb\|数据库引擎InnoDB vs LevelDB]]
     - [[003-Publish/History/fp-scala-part2\|Scala函数式编程-Part2]]
