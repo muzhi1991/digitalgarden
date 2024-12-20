@@ -76,7 +76,7 @@ Spark相关论文如下：
 3. 数据集在spark中表示成**一串scala的object**：他们表示了** the lineage of each RDD**，且每个对象包括
   * 一个指向他parent的指针
   * parent如何转换为这个RDD
-    ![](http://fodi.limuzhi.us.kg/images/IMG-2ff114dec10c672f.webp)
+    ![](https://fodi.limuzhi.us.kg/images/IMG-2ff114dec10c672f.webp)
 4. 所有RDD都实现了的**一组相同的接口**：
   * getPartitions：获取所有分区ID的List
   * getIterator(partition)：获得一个分区恩迭代器
@@ -135,7 +135,7 @@ Spark相关论文如下：
 * 为了错误容忍，RDD提供了一种『受限的共享内存』：他是基于粗粒度的transformation，而不是细粒度的对共享状态的update。
   * 对比DSM：distributed shared memory（如key-value stores）是操控数据表中的可变状态（是一个任意地址位置的值）。他要错误容忍，必须**副本**+**log update**。对于数据密集型应用这是不可接收的：需要大量额外空间和传输带宽。
   * 对比RDD：logging the transformations used to build a dataset (itslineage) rather than the actual data
-  ![](http://fodi.limuzhi.us.kg/images/IMG-8f00d8bf12af142b.webp)
+  ![](https://fodi.limuzhi.us.kg/images/IMG-8f00d8bf12af142b.webp)
 * rdd的特征
   * 错误容忍（最重要的，也是最大的挑战）
   * 并行的数据结构
@@ -191,13 +191,13 @@ Spark相关论文如下：
 * spark架构，用户写driver，连接n个worker
   * driver上的RDD跟踪整个lineage
   * worker是**常驻进程**，可以在内存中存储RDD的各个分区
-  ![](http://fodi.limuzhi.us.kg/images/IMG-309071e038e5c1fe.webp)
+  ![](https://fodi.limuzhi.us.kg/images/IMG-309071e038e5c1fe.webp)
 * 用户通过rdd操作的参数（如map的参数）传递闭包，这个闭包就是个java的object，可以序列化，然后传输到其他node上，再加载运行。（注意也会序列化闭包依赖的变量，一个注意点：变量一斤发送，再修改变量，发送的闭包里的值不会变化）
 * RDD是有类型的如RDD[Int]，但是我们一般不用在意，scala会自动类型推断。
 * 虽然原理很简单，但是scala的闭包有些问题需要修改（使用反射修改的），如果用交互模式，也需要一些修改，但是不需要修改scala编译器。（之前的论文也提到过）
 
 #### RDD的操作（operation）
-![](http://fodi.limuzhi.us.kg/images/IMG-1c023560a2459db4.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-1c023560a2459db4.webp)
 注意点：
 * transformations是lazy，action才是真正运算
 * 一些操作如join, 只在key-value pairs的RDD上有用
@@ -212,7 +212,7 @@ Spark相关论文如下：
   * cache的应用
 * 例子1：**PageRank（重点）**
   * 理解算法，同时看一下RDD的图谱。
-  ![|337x250](http://fodi.limuzhi.us.kg/images/IMG-7f74375bf83b56ee.webp)
+  ![|337x250](https://fodi.limuzhi.us.kg/images/IMG-7f74375bf83b56ee.webp)
   * 几个优化要点（**对于多次迭代的应用通用**）
     * 缓存ranks，而不要缓存links。原因：links重新生成的成本小，且数据集很大，没必要缓存
     * ranks的缓存，persist使用`RELIABLE`的flag。因此迭代运算成本高，一旦丢失重算非常耗时，所以**可靠缓（内部可能缓存了多副本）存**每一步生成ranks，而且ranks占用空间很小。（当然旧的ranks可以手动抛弃）
@@ -225,7 +225,7 @@ Spark相关论文如下：
 
 #### 设计一：如何表示RDD
 RDD的表示通过暴露5个信息（5个接口方法）来实现
-![](http://fodi.limuzhi.us.kg/images/IMG-b490de8d5c178dcd.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-b490de8d5c178dcd.webp)
  a set of partitions, which are atomic pieces of the dataset; 
  a set of dependencies on parent RDDs; a function for computing the dataset based on its par-ents; and metadata about its partitioning scheme and data placement. 
  
@@ -266,7 +266,7 @@ RDD的表示通过暴露5个信息（5个接口方法）来实现
     * 一个窄依赖，一个宽依赖
     * 两个宽依赖
   * 他的输出必定有一个partitioner（继承parent的partitioner，或者是默认hash-partitioner）
-![](http://fodi.limuzhi.us.kg/images/IMG-cbea29609a28908e.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-cbea29609a28908e.webp)
 
 ### 其他实现
 Each Spark program runs as a separate Mesos application, with its own driver (master) and workers, and resource sharing between these applications is handled by Mesos.
@@ -276,7 +276,7 @@ Each Spark program runs as a separate Mesos application, with its own driver (ma
   * 每个stage内部是尽量多的窄依赖的操作，可以pipeline执行---**合并形成一个task？**
   * stage的边界是宽依赖，执行shuffle操作
   * 任何已经计算完成的分区（如cached过的）可以短路parent RDD的计算、
-  ![](http://fodi.limuzhi.us.kg/images/IMG-0e33eb5b159fcf27.webp)
+  ![](https://fodi.limuzhi.us.kg/images/IMG-0e33eb5b159fcf27.webp)
 * scheduler基于数据本地性，调用task（delay schedule算法）
   * 如果数据在某个node的内存中，直接发送给该node运行
   * 否则，如果改partition有preferred的位置，直接发送给他。
@@ -291,7 +291,7 @@ Each Spark program runs as a separate Mesos application, with its own driver (ma
 #### 整合解释器
 略，基本与上一篇的解释一致，问题还是Modified code generation的意义
 
-![](http://fodi.limuzhi.us.kg/images/IMG-365156160b216939.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-365156160b216939.webp)
 
 #### checkpoint机制
 RDD lineage虽然可以用来恢复失败任务，但是，如果在**RDD链条很长**的情况下，恢复重算非常费时间。**尤其是存在宽依赖的场景**，下游的一个task失败，导致上游大量重算。如之前的RankPage的例子。
@@ -335,7 +335,7 @@ LRU策略具体是什么
 * receiver端读取sender时，应该同时读取多个sender的数据（hadoop中使用了5，spark0.5中默认的fetcher是1个，有个优化的类是3个），参见下图的横轴和竖轴，竖轴是完成时间（竖的线段是抖动范围）
 * 每个receiver读取单个sender时，随着receiver数目的增多，性能变差，参见下图中不同颜色的线
 
-![](http://fodi.limuzhi.us.kg/images/IMG-c98adda8373baeca.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-c98adda8373baeca.webp)
 
 优化方案（没有实践）
 * 加权带宽方案，对于数据倾斜的sender，receiver分配带宽时，增加他的权重（按照数据量的比例分配）

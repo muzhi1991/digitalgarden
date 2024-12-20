@@ -54,7 +54,7 @@
 
 一个新的项目clone后有哪些分支：
 
-![all branch](http://fodi.limuzhi.us.kg/images/IMG-af5ae175b5228177.webp)
+![all branch](https://fodi.limuzhi.us.kg/images/IMG-af5ae175b5228177.webp)
 
 * `master` 当前的默认分支，第一次取下来后与`origin/master `指向相同，但是后续可以在上面开发
 
@@ -122,7 +122,7 @@
 
   参考下图学习：
 
-  ![git status](http://fodi.limuzhi.us.kg/images/IMG-5bac7993b4e8db8c.webp)
+  ![git status](https://fodi.limuzhi.us.kg/images/IMG-5bac7993b4e8db8c.webp)
 
 几个关注点：
 
@@ -154,7 +154,7 @@
 
 * merge完成时，被合入分支的最后一个commit在待合入分支之中，移动HEAD到最后一个commit。如下图所示：
 
-  ![fast forward](http://fodi.limuzhi.us.kg/images/IMG-9b834d017fbfa2b5.webp)
+  ![fast forward](https://fodi.limuzhi.us.kg/images/IMG-9b834d017fbfa2b5.webp)
 
 * rebase完成后，commit记录合入后，HEAD指针直接向前移动多个commit。
 

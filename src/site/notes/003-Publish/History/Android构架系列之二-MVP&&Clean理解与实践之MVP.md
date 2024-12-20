@@ -69,7 +69,7 @@
 ####  Supervising Presenter
 一些逻辑简单的UI操作操作可能不需要使用Presenter来完成，比如更新一个name，同时修改model中一个变量，之间没有复杂的展示逻辑（注意Presenter只管展示逻辑）。我们不需要Presenter参与。同时项目中也有一些的UI逻辑的操作，如显示name，同时刷新并展示用户相关信息，这就需要Presenter参与。
 因此，**为了避免在某些情况下Presenter的"多余"，该模式中添加了Model与View的直接通路**，类似于DataBinding。但是，注意对应的使用情景，见下图。
-![](http://fodi.limuzhi.us.kg/images/IMG-43094927f1ca3232.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-43094927f1ca3232.webp)
 
 #### Passive View
 其实在MVP中View就是被动的了，Presenter是Master，这里的被动View是什么呢？因为，**MVP中的View还是被动的不够完全**。一个简单的程序逻辑如下：
@@ -85,7 +85,7 @@
 这里的MVP与MVC都是指的是**客户端**的构架！
 > MVP/MVC都是对于有GUI界面而言的。web服务端的GUI界面在Browser中，对服务端而言只是一个接口/模板的存在，**他们所说的MVC**基本上就是客户端的MVP（更确切的说不应当叫MVC，应当叫**Model2构架**，[参考此文](http://blog.turn.tw/?p=1539)），因为它不符合MVC中关于**View必须直接订阅Model**的关系，而MVP/Model2中数据必须经过X中转。
 
-![](http://fodi.limuzhi.us.kg/images/IMG-d3236bcc29f4793d.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-d3236bcc29f4793d.webp)
 一言以蔽之，MVP与MVC都是分层的方法，其中最大的不同就是数据流向。
 
 * MVP:V -> P -> M -> P -> V

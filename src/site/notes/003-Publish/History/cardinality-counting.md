@@ -69,7 +69,7 @@
 
 使用BF实现一个简单的概率统计方法。布隆过滤器可以k个Hash函数来判断一个元素是否在集合中。用误判率$P_{fp}$表示判断的准确性。
 
-![](http://fodi.limuzhi.us.kg/images/IMG-41385b7626c8cb19.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-41385b7626c8cb19.webp)
 
 误判率估算公式：$$P_{fp} \approx (1-e^{-kn/m})^k $$（集合大小n，bitmap位数m，Hash函数个数k）
 
@@ -116,7 +116,7 @@ $$\hat n=−m\log\dfrac{u}{m}$$（这里的m为bitmap的大小；u为0的个数�
 - 数据流每来一个元素，计算其哈希值并对m取模，然后将该位置为1
 - 查询时，设bitmap中还有u个bit为0，则不同元素的总数近似为$ -m\log\dfrac{u}{m}$
 
-![](http://fodi.limuzhi.us.kg/images/IMG-ee19ea265655aabc.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-ee19ea265655aabc.webp)
 
 ### 基本思想
 
@@ -168,7 +168,7 @@ $$m>β(e^t−t−1)$$ 其中$$β=max(5,1/(ϵt)^2)$$
 
 我们可以参考作者论文中给出的实验结果分布图
 
-![](http://fodi.limuzhi.us.kg/images/IMG-7652b21cb4ad0535.webp)
+![](https://fodi.limuzhi.us.kg/images/IMG-7652b21cb4ad0535.webp)
 
 #### 合并特性
 
@@ -328,7 +328,7 @@ HLLC中，为了解决LLC在基数较小时偏差大的问题，在小基数时�
 
 我们以m=16384（p=14）为例，偏差随基数数目变化的实验结果如下图所示。
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-522b7be008e76562.webp" width="400px" />
+<img src="https://fodi.limuzhi.us.kg/images/IMG-522b7be008e76562.webp" width="400px" />
 
 得出一下结论与修正过程如下：
 
@@ -338,7 +338,7 @@ HLLC中，为了解决LLC在基数较小时偏差大的问题，在小基数时�
 
 在HLLC中为了修正这个问题我们比较LC，HLLC ，HLLC_nobias的平均误差（p=14）：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-5e69114e2f314372.webp" width="400px" />
+<img src="https://fodi.limuzhi.us.kg/images/IMG-5e69114e2f314372.webp" width="400px" />
 
 可以发现如下结论
 
@@ -353,7 +353,7 @@ HLLC中，为了解决LLC在基数较小时偏差大的问题，在小基数时�
 
 对比，LC+HLLC的算法和LC+HLLC_nobias+HLLC修正偏差效果如下 ，可以发现**新加入的HLLC_nobias优化了突变值**，使偏差变得平缓：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-bc23872e5b4eaa06.webp" width="400px" />
+<img src="https://fodi.limuzhi.us.kg/images/IMG-bc23872e5b4eaa06.webp" width="400px" />
 
 #### 使用稀疏数组（空间优化）
 
@@ -361,7 +361,7 @@ HLLC（64bit Hash）算法中使用了6m的**固定空间**存储数据，但是
 
 * 在稀疏表示的大小`size(list) < 6m`时，使用$(idx, \sigma(w))$ 这种稀疏pair表示，其中idx为桶号， ρ(w)为该桶值。大小`size(list)=(p+6)*x `(x为非0个数)，实际存储使用Integer从高Bit位开始存储。
 
-  ![](http://fodi.limuzhi.us.kg/images/IMG-a470101fc0792c54.webp)
+  ![](https://fodi.limuzhi.us.kg/images/IMG-a470101fc0792c54.webp)
 
 * 在内存中排序存储所有pairs，为了实现**高效插入**数据，我们维护一个零时的集合。插入时直接放入tmp_set中，当tmp_set的大小大于25%的size(list)时，会对tmp_set排序并**批量merge到list中**，合并相同的idx，取最大值，凭顺序插入新idx（这些操作一次遍历即可完成）。
 
@@ -380,7 +380,7 @@ HLLC（64bit Hash）算法中使用了6m的**固定空间**存储数据，但是
 
 使用动态精度后(p'=25)，对比HLLC_nobias 效果如图，可以看到在使用LC算法的阶段（基数小）的时候精度大大增加:
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-51bb0e1be51dc01e.webp" width="400px" />
+<img src="https://fodi.limuzhi.us.kg/images/IMG-51bb0e1be51dc01e.webp" width="400px" />
 
 > 备注：在Google提供的算法代码中，默认在稀疏数组表示中使用高精度p'，**降级为p时自动切换为正常表示方法**。 若设置的p'过大，会导致过早切换。参考代码EncodeHash/DecodeHash
 
@@ -412,7 +412,7 @@ end if
 
 上述几种算法在稀疏数组表示时可以存储的pair数量（p'=25）对比如下
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-42b961aa5b4a438f.webp" width="400px" />
+<img src="https://fodi.limuzhi.us.kg/images/IMG-42b961aa5b4a438f.webp" width="400px" />
 
 ### 序列化相关
 
@@ -423,7 +423,7 @@ end if
 
 HLL++算法最终的效果对比原始HLL实现（p=14，p'=25）：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-0acba67e50443adb.webp" width="400px" />
+<img src="https://fodi.limuzhi.us.kg/images/IMG-0acba67e50443adb.webp" width="400px" />
 
 参考文章
 

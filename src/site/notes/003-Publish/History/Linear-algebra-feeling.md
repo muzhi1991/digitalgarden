@@ -87,17 +87,17 @@
   * 向量是一个抽象的概念（他满足某些约束就是向量）
   * 但是，这里我们从**几何视角**看待它：是用来表示空间中**以原点为起点**，以 $\begin{bmatrix} -2  \\  3  \end{bmatrix}$ 该点为终点的一个箭头（与物理视角不同，他是有固定起点的），他表示，从原点出发，先沿着 x 轴前进 -2 个单位长度，再接着像 y 轴方向前进 3 个单位长度。
 
-  <img src="http://fodi.limuzhi.us.kg/images/IMG-b5e65438046d9e95.webp" width=512 />
+  <img src="https://fodi.limuzhi.us.kg/images/IMG-b5e65438046d9e95.webp" width=512 />
 
 虽然我们展示了 3 种视角，但是从本质上看（抽象的角度）他们是一致的。无论什么视角，他们都满足两个基本的运算（这个我们会在最后谈论这个主题，把向量推广开去）：
 
 * 加法运算
 
-  <img src="http://fodi.limuzhi.us.kg/images/IMG-3f8dba54ad5b70c4.webp" width=256 />
+  <img src="https://fodi.limuzhi.us.kg/images/IMG-3f8dba54ad5b70c4.webp" width=256 />
 
 * 数乘运算
 
-  <img src="http://fodi.limuzhi.us.kg/images/IMG-57a3a3c1164529d7.webp" width=256 />
+  <img src="https://fodi.limuzhi.us.kg/images/IMG-57a3a3c1164529d7.webp" width=256 />
 
 因此，下面的论述中，我们都以『几何视角』下的向量来讨论。
 
@@ -105,17 +105,17 @@
 
 在我们讨论向量时，其实我们都默认选择了一组基 `i,j`，他们沿着 x 轴和 y 轴方向，他们正好大小是 1。
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-efa96362b1fa43d5.webp" width=512/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-efa96362b1fa43d5.webp" width=512/>
 
 我们选择这一组基可以表示整个二维空间，我们说这组基**张成了二维的空间**
 
 不只一组基，我们可以选择其他线性无关的向量的作为基底，此时二维空间尽在掌握。
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-a7b23f3e7d78cdf9.webp" width=512/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-a7b23f3e7d78cdf9.webp" width=512/>
 
 当我们『运气不好』时，选择的基底（共线，线性相关）不能张成整个二维空间，而是一条直线（一纬空间）
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-0554ccf30680f9bf.webp" width=256/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-0554ccf30680f9bf.webp" width=256/>
 
 定义 -- 向量空间的一组基：张成改空间的一组**线性无关**的向量集
 
@@ -146,7 +146,7 @@
 
 由于这个推理非常重要，我们举例说明：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-33e78e14433e5c9d.webp" width=512/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-33e78e14433e5c9d.webp" width=512/>
 
 如上图所示，
 
@@ -156,7 +156,7 @@
 
 因此，我们可以把 $\hat i$ 和 $\hat j$ 放在一起形成一个 `2*2` 的矩阵，表示我们的线性变换（图上的值不对！！！）：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-70a7ddf5800d12e6.webp" width=256/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-70a7ddf5800d12e6.webp" width=256/>
 
 所以，不难得出，每当我们看到一个矩阵时，可以从得到两个信息：
 
@@ -165,7 +165,7 @@
 
 > 一个简单的应用：我们可以使用上面的结论轻易地求得，一个把图像逆时针旋转 90 度的变换矩阵是 $\begin{bmatrix} 0 & -1 \\  1 & 0  \end{bmatrix}$。解释如下：我们只需要**跟踪**旋转后的 $i$、$j$ 坐标即可，画图后显然得到新的 $\hat i$ 在（0,1），新的 $\hat j$ 在（-1，0）上：
 >
-> <img src="http://fodi.limuzhi.us.kg/images/IMG-5baffc272142d1c2.webp" width=256/>
+> <img src="https://fodi.limuzhi.us.kg/images/IMG-5baffc272142d1c2.webp" width=256/>
 
 #### 从基变换的角度看矩阵（参考下面）
 
@@ -247,20 +247,20 @@ $$ \begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}   \begin{bmatrix} -1  \\  2  \e
 
 我们可以从另外一个角度理解基底变换的过程：我们先**误认为**$\begin{bmatrix} -1 \\ 2 \end{bmatrix}$ 是坐标系 $i= \begin{bmatrix} 1  \\  0  \end{bmatrix}$ 、$j=\begin{bmatrix} 0  \\  1  \end{bmatrix}$ 下的坐标，此时，我们通过线性变换把 $\begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}$ 把坐标轴 $i$、$j$（基坐标）分别变换到了新的位置 $\hat i=\begin{bmatrix} 2 \\  1  \end{bmatrix}$、$\hat j= \begin{bmatrix} -1  \\  1  \end{bmatrix}$（他们也是用默认坐标系表示的），即 $\begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}$。此时，我们把误解转换为了真正的向量。图示如下：
 
-<img src=" http://fodi.limuzhi.us.kg/images/IMG-2fe90038171233f7.webp" width=480/>
+<img src=" https://fodi.limuzhi.us.kg/images/IMG-2fe90038171233f7.webp" width=480/>
 
 总结一下：理解计算过程
 
 * 几何上看：这个矩阵表示把我们的默认坐标系转换为新的基坐标系
 * 数值上看：把其他基底表示（Jennifer 的语言）的坐标 $\begin{bmatrix} -1 \\ 2 \end{bmatrix}$ 转换成默认基底标识（我们的语言）的坐标 $\begin{bmatrix} -4 \\ 1 \end{bmatrix}$
 
-<img src=" http://fodi.limuzhi.us.kg/images/IMG-04aa75ed07ab9221.webp" width=480/>
+<img src=" https://fodi.limuzhi.us.kg/images/IMG-04aa75ed07ab9221.webp" width=480/>
 
 相反地，如果我们已知某个向量默认坐标系下的表示，需要得到他在其他基底下的表示则是一个逆过程。
 
-<img src=" http://fodi.limuzhi.us.kg/images/IMG-fefe4fa6e49c68a7.webp" width=480/>
+<img src=" https://fodi.limuzhi.us.kg/images/IMG-fefe4fa6e49c68a7.webp" width=480/>
 
-<img src=" http://fodi.limuzhi.us.kg/images/IMG-bfd5a805bd19ea53.webp" width=480/>
+<img src=" https://fodi.limuzhi.us.kg/images/IMG-bfd5a805bd19ea53.webp" width=480/>
 
 因此，我们获得了从**另外一个角度**理解 `矩阵 * 向量`（$Ax=y$）的方法（之前的角度是线性变换）：
 
@@ -272,7 +272,7 @@ $$ \begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}   \begin{bmatrix} -1  \\  2  \e
 
 我们已经知道对于标准基之下很容易就知道这个矩阵 $\begin{bmatrix} 0 & -1 \\  1 & 0  \end{bmatrix}$（参考上面一节）。可是我们并不能直接把他应用到非标准的基底上。理论上我们可以用类似的思想：跟踪在非标准坐标系下的 $i$、$j$ 坐标的的取向来确定。但是这很不直观。更为常用的作法是**把它转换到标准坐标系后执行旋转，最后再转换回非标注坐标系**，参考下图：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-cedb898a9255115e.webp" width=512/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-cedb898a9255115e.webp" width=512/>
 
 此时，我们对非标准坐标系下的任意向量 $v$ 执行变换 $\begin{bmatrix} 1/3 & -2/3 \\  5/3 & -1/3  \end{bmatrix}$ 等价于在标准坐标系下执行对象向量 $v^{'}$ 执行 $\begin{bmatrix} 0 & -1 \\  1 & 0  \end{bmatrix}$ 变换（数学上我们叫这两个矩阵**相似**）。（PS：反过来也等价，我们可以把一个在标准坐标系下负责的变换转换成非标准坐标系看起来简单的变换，如对角矩阵，参考下面的『特征基』）
 
@@ -289,11 +289,11 @@ $$ \begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}   \begin{bmatrix} -1  \\  2  \e
 
 1. 向量 $v_1$ 变换后的 $v_1^{'}$ 偏离了原来的方向（如下：粉红色是 $v_1$，黄色是 $v_1^{'}$）
 
-   <img src="http://fodi.limuzhi.us.kg/images/IMG-5d522b05edbd0035.webp" width=256/>
+   <img src="https://fodi.limuzhi.us.kg/images/IMG-5d522b05edbd0035.webp" width=256/>
 
 2. 向量 $v_2$ 变换后的 $v_2^{'}$ 他们两者保持了统一方向：即 $v_2^{'}$ 依旧留在 $v_2$ 张成的空间里（**$v_2$ 张成的向量空间是一条直线**）
 
-   <img src="http://fodi.limuzhi.us.kg/images/IMG-ac71011a1f13021c.webp" width=256/>
+   <img src="https://fodi.limuzhi.us.kg/images/IMG-ac71011a1f13021c.webp" width=256/>
 
 显然，我们能感受到：**情况 1 是普遍的，而情况 2 是特殊的**。我们定义：情况 2 对于的向量 $v_2$ 就是特征向量，而 $v_2$ 与变换后的 $v_2^{'}$ 的长度变化（$len(v_2^{'})/len(v_2)$）就是特征值。可以看出特征值和特征向量是由矩阵本身决定的。
 
@@ -305,7 +305,7 @@ $$ \begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}   \begin{bmatrix} -1  \\  2  \e
 
 对于上面的例子 $\begin{bmatrix} 3 & 1 \\  0 & 2  \end{bmatrix}$，可能有多条特征向量：除了上面情况 2 那个空间的所有向量（他的效果 - 特征值是把向量拉升 2 倍），我们能看出（从列向量的角度），沿着 x 轴的所有向量也是特征向量，他的效果 - 特征值是把向量拉升 3 倍。所有特征向量如下所示，他也告诉我们：**除此之外的其他向量在变换的过程中或多或少都有旋转**。
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-5d9e219702b9313f.webp" width=256/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-5d9e219702b9313f.webp" width=256/>
 
 > 这里隐含了一个结论：**如果矩阵有 n 个不同的特征值，那么他们必定至少有 n 线性无关的特征向量。**之所以是至少**，是因为有可能特征值相同，但是特征向量不共线。
 >
@@ -317,23 +317,23 @@ $$ \begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}   \begin{bmatrix} -1  \\  2  \e
 
 根据特征向量的定义，我们可以得到 $A \vec{v}=\lambda\vec{v}$，解该方程组就能求解
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-921d212531ba0888.webp" width=128/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-921d212531ba0888.webp" width=128/>
 
 对于上面的第一个例子 --$\begin{bmatrix} 3 & 1 \\  0 & 2  \end{bmatrix}$：2 个不同的解（特征值），对应不同的特征向量。
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-e214169764d68420.webp" width=256/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-e214169764d68420.webp" width=256/>
 
 对应上面第二个例子 -- 旋转变换 $\begin{bmatrix} 0 & -1 \\  1 & 0  \end{bmatrix}$：没有实数解，没有特征向量。
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-d50887fa81afc075.webp" width=256/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-d50887fa81afc075.webp" width=256/>
 
 举一个只有**一个特征值**，且**只有一个特征向量**的例子 -- 剪切变换 $\begin{bmatrix} 1 & 1 \\  0 & 1  \end{bmatrix}$：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-9316a971800a6e87.webp" width=256/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-9316a971800a6e87.webp" width=256/>
 
 举一个只有**一个特征值**，但是**有无数个特征向量**的例子—同等拉伸变换 $\begin{bmatrix} 2 & 0 \\  0 & 2  \end{bmatrix}$：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-181ce040a9021ff7.webp" width=256/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-181ce040a9021ff7.webp" width=256/>
 
 可以看一下其他三维矩阵的几个 [典型例题](http://dec3.jlu.edu.cn/webcourse/t000022/teach/chapter5/5_2.htm)，我们知道，在特征值不同时，矩阵的特征向量的个数与特征值个数相同，在特征值相同时（**二重特征值**），特征向量的个数要把特征值带入方程组看**解空间的大小**。
 
@@ -341,7 +341,7 @@ $$ \begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}   \begin{bmatrix} -1  \\  2  \e
 
 对于矩阵 A（看成标准坐标系下的某种变换），如果**存在 n 个线性无关的特征向量**，使用特征向量作为一组基—>结合『基变换』—>转换为以 n 个特征向量为基底的某个**对角变换**，其中对角线的值即为特征值。如下图所示：我们把标准坐标系下的 $\begin{bmatrix} 3 & 1 \\  0 & 2  \end{bmatrix}$ 变换为 $\begin{bmatrix} 1 \\ 0 \end{bmatrix}  \begin{bmatrix}  -1 \\ 1  \end{bmatrix}$ 为基坐标下的变换 $\begin{bmatrix} 3 & 0 \\  0 & 2  \end{bmatrix}$。这是一个对角变换具有良好的性质
 
-<img src=" http://fodi.limuzhi.us.kg/images/IMG-8cd49de96803ef43.webp" width=480/>
+<img src=" https://fodi.limuzhi.us.kg/images/IMG-8cd49de96803ef43.webp" width=480/>
 
 > 通过特征值的几何意义，我们知道，他就是某个坐标系（特征基）下的 scale 变换。由此，特征向量的意义：**摆脱原始坐标轴（转而用任意特征基坐标轴）考察矩阵表示的变换。**
 
@@ -391,19 +391,19 @@ $$ \begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}   \begin{bmatrix} -1  \\  2  \e
 
 多项式空间，以及之上的线性变换（导数）运算如下：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-3a139e1ebbd06aa8.webp" width=512/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-3a139e1ebbd06aa8.webp" width=512/>
 
 #### 泛化向量空间上的概念与性质
 
 基于上面的定义，函数、求导、多项式空间。我们可以泛化出对于的性质
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-4bcbe03af4a4a5fe.webp" width=512/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-4bcbe03af4a4a5fe.webp" width=512/>
 
 #### 定义抽象向量与空间
 
 如果你处理的对象（『向量』）具有『相加』和『数乘』的性质，并基于他定义『线性变换』和『向量空间』，我们想由此推导出我们上面提到『零空间』『特征向量』『点积』等等概念。需要定义的『向量』满足下列 8 条公理：
 
-<img src="http://fodi.limuzhi.us.kg/images/IMG-0bba3b0157adfb41.webp" width=512/>
+<img src="https://fodi.limuzhi.us.kg/images/IMG-0bba3b0157adfb41.webp" width=512/>
 
 结论：**向量可以是任何东西**。包括：一个箭头、一组数，一个函数，任何满足上面性质的东西。
 

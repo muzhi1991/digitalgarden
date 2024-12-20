@@ -81,7 +81,7 @@
 * Caches are also aware of which entries are part of the same dataset （可以区分出不同的partition是不是同一个dataset的）
 * key是(datasetID, partition) ，这里的datasetID包含了命名空间（Space）信息
 
-![|414x114](http://fodi.limuzhi.us.kg/images/IMG-b8feb84bc76c6be6.webp)
+![|414x114](https://fodi.limuzhi.us.kg/images/IMG-b8feb84bc76c6be6.webp)
 
 key的设计--KeySpace
 原因：每个exector上已有一个cache实例，所有模块共享，需要区分命名空间
@@ -112,7 +112,7 @@ https://stackoverflow.com/questions/23701207/why-do-xmx-and-runtime-maxmemory-no
 
 > 理解LRU设计逻辑  
 > Cannot make space without removing part of the same dataset, or a more recently used one
-> ![|314x314](http://fodi.limuzhi.us.kg/images/IMG-346e2538adac40a4.webp)
+> ![|314x314](https://fodi.limuzhi.us.kg/images/IMG-346e2538adac40a4.webp)
 https://blog.csdn.net/luanlouis/article/details/43017071
 
 总结
@@ -129,8 +129,8 @@ https://blog.csdn.net/luanlouis/article/details/43017071
 
 #### Serializer
 线程安全的序列化封装，返回一个序列化工具的实例`SerializerInstance`，该接口是序列化相关的方法，one instance used by one thread at a time.
-![|295x84](http://fodi.limuzhi.us.kg/images/IMG-cbd0c78fa6537300.webp)
-![|730x281](http://fodi.limuzhi.us.kg/images/IMG-1346deede8deb299.webp)
+![|295x84](https://fodi.limuzhi.us.kg/images/IMG-cbd0c78fa6537300.webp)
+![|730x281](https://fodi.limuzhi.us.kg/images/IMG-1346deede8deb299.webp)
 
 使用时`val ser = SparkEnv.get.serializer.newInstance()`
 
