@@ -65,12 +65,12 @@ $\theta=\left(X^{T} X\right)^{-1} X^{T} y$
 
 梯度下降与正规方程的比较：
 
-| 梯度下降                      | 正规方程                                                     |
-| ----------------------------- | ------------------------------------------------------------ |
-| 需要选择学习率$\alpha$        | 不需要                                                       |
-| 需要多次迭代                  | 一次运算得出                                                 |
+| 梯度下降             | 正规方程                                                                                                            |
+| ---------------- | --------------------------------------------------------------------------------------------------------------- |
+| 需要选择学习率$\alpha$  | 不需要                                                                                                             |
+| 需要多次迭代           | 一次运算得出                                                                                                          |
 | 当特征数量$n$大时也能较好适用 | 需要计算$\left(X^{T} X\right)^{-1}$ 如果特征数量n较大则运算代价大，因为矩阵逆的计算时间复杂度为$O\left( {n}^{3}\right)$，通常来说当$n$小于10000 时还是可以接受的 |
-| 适用于各种类型的模型          | 只适用于线性模型，不适合逻辑回归模型等其他模型               |
+| 适用于各种类型的模型       | 只适用于线性模型，不适合逻辑回归模型等其他模型                                                                                         |
 
 总结一下，只要特征变量的数目并不大，标准方程是一个很好的计算参数$\theta $的替代方法。具体地说，**只要特征变量数量小于一万，我通常使用标准方程法**，而不使用梯度下降法。
 
@@ -108,7 +108,7 @@ $\theta=\left(X^{T} X\right)^{-1} X^{T} y$
 - $\theta^{T}x>=0$  时，预测 $y=1$
 - $\theta^{T}x<0$  时，预测 $y=0$
 
-![6590923ac94130a979a8ca1d911b68a3.png](https://fodi.limuzhi.us.kg/images/IMG-994279786de2749f.webp )
+![6590923ac94130a979a8ca1d911b68a3.png](https://fodi.limuzhi.us.kg/images/IMG-994279786de2749f.webp)
 
 上述模型的表示可以理解为决策边界：
 ![f71fb6102e1ceb616314499a027336dc.jpg](https://fodi.limuzhi.us.kg/images/IMG-695b5a40ecf50fff.webp )
@@ -121,7 +121,7 @@ $\theta=\left(X^{T} X\right)^{-1} X^{T} y$
 > 是否继续使用线性回归的MSE？：不行，$h_{\theta}(x)=\frac{1}{1+e^{-\theta^{T} x}}$带入$J(\theta)=\frac{1}{m} \sum_{i=1}^{m} \frac{1}{2}\left(h_{\theta}\left(x^{(i)}\right)-y^{(i)}\right)^{2}$后，代价函数**J函数非凸**，有许多局部最小值，这将影响梯度下降算法寻找全局最小值
 > ![8b94e47b7630ac2b0bcb10d204513810.jpg](https://fodi.limuzhi.us.kg/images/IMG-62008adb3fc26609.webp)
 
-重新定义逻辑回归的代价函数为：$J\left( \theta  \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{<span class=""></span>{Cost}\left( {h_\theta}\left( {x}^{\left( i \right)} \right),{y}^{\left( i \right)} \right)}​$，其中
+重新定义逻辑回归的代价函数为：$J\left( \theta  \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{{Cost}\left( {h_\theta}\left( {x}^{\left( i \right)} \right),{y}^{\left( i \right)} \right)}​$，其中 
 $$\operatorname{cost}\left(h_{\theta}(x), y\right)=\left\{\begin{array}{ll}{-\log \left(h_{\theta}(x)\right),} & {\text { if } y=1} \\ {-\log \left(1-h_{\theta}(x)\right)} & {\text { if } y=0}\end{array}\right.​$$
 
 $Cost(h_\theta(x),y)​$图像如下：
