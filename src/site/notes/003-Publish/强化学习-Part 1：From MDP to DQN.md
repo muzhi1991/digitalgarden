@@ -182,7 +182,12 @@ $$
 其中有一个重要的概念“**最优策略**”：最优策略可以理解为这个策略下，所有状态 $s$ 的 state value $v_\pi (s)$ 都大于等于其他策略下对应状态的 state value
 总体来看，贝尔曼最优公式的含义是：最优策略下的 state value，然而最优策略又和 state value 有关，他们形成了一个奇妙的循环。
 
-基于这个公式，我们可以迭代求出最优策略，
+类似的对于 action value 的形式有
+$$
+\begin{aligned} {Q^{*} ( s, a )} & {{}=\sum_{s^{\prime}, r} p ( s^{\prime}, r \mid s, a ) \left[ r+\gamma\operatorname* {m a x}_{a^{\prime}} Q^{*} ( s^{\prime}, a^{\prime} ) \right].} \\ {} & {{}=\mathbb{E} \left[ R_{t+1}+\gamma\operatorname* {m a x}_{a^{\prime}} Q^{*} ( S_{t+1}, a^{\prime} ) \mid S_{t}=s, A_{t}=a \right], \quad\forall s, a.} \\ \end{aligned} 
+$$
+
+基于这个公式，我们可以迭代求出最优策略
 
 ### 值迭代与策略迭代算法（求解最优策略贝尔曼最优公式）
 
@@ -361,7 +366,7 @@ q_{t+1} ( s_{t}, a_{t} )=q_{t} ( s_{t}, a_{t} )-\alpha_{t} ( s_{t}, a_{t} ) \lef
 $$
 关键点如下：
 * 需要的数据 episode 里面的 $\{( s_{t}, a_{t}, r_{t+1}, s_{t+1}) \}_{t}$,
-* 推导是求解贝尔曼最优公式的 action value 形式： $q ( s, a )=\mathbb{E} \left[ R_{t+1}+\gamma\operatorname* {m a x}_{a} q ( S_{t+1}, a ) \Big| S_{t}=s, A_{t}=a \right], \quad\forall s, a.$
+* 推导是求解贝尔曼最优公式的 action value 形式： $q ( s, a )=\mathbb{E} \left[ R_{t+1}+\gamma\operatorname* {m a x}_{a'} q ( S_{t+1}, a' ) \Big| S_{t}=s, A_{t}=a \right], \quad\forall s, a.$ ，当 $r_{t+1}$ 与 $s_{t+1}$ 也已知的时候有我们代入后得到：$q ( s_t , a_t )= r_{t+1}+\gamma\operatorname* {m a x}_{a'} q ( s_{t+1}, a' )$
 * **仅更新被访问到的状态**的 action value，其他的状态保持不变
 
 > PS：这里 Q，是 quality 的缩写，表示我们想要学习一个可以衡量（state, action） quality 的 table/function
@@ -434,7 +439,7 @@ $$
 	* 这里面 $r_{t+1}+\gamma\hat{v} ( s_{t+1}, w_{t} )-\hat{v} ( s_{t}, w_{t} )$ 是 td error
 	* $r_{t+1}+\gamma\hat{v} ( s_{t+1}, w_{t} )$ 这个是 td target
 
-> 这里理解 TD 算法，可以用期望的形式展开 $v_{\pi} ( s_{t} )$ 为 $v_{\pi} ( s )=\mathbb{E} {\big[} R+\gamma G | S=s {\big]}, \quad s \in{\mathcal{S}}$。
+> 这里理解 TD 算法， $v_{\pi} ( s_{t} )$ 的期望形式为 $v_{\pi} ( s )=\mathbb{E} {\big[} R+\gamma G | S=s {\big]}, \quad s \in{\mathcal{S}}$, 在已知 $r_{t+1}$ 和 $s_{t+1}$ 的情况下，可以展开为 $v_{\pi} ( s_{t} ) = r_{t+1}+\gamma {v_{\pi}} ( s_{t+1} )$
 
 ![image.png](https://fodi.limuzhi.us.kg/images/IMG-e279c9b2e0354639.webp)
 
