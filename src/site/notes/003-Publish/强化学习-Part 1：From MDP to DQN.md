@@ -2,7 +2,7 @@
 {"dg-publish":true,"dg-path":"强化学习-Part 1：From MDP to DQN.md","permalink":"/强化学习-Part 1：From MDP to DQN/","title":"强化学习 -Part 1：From MDP to DQN","created":"2025-02-01 14:38:26","updated":"2025-02-16 17:50:11"}
 ---
 
-# 强化学习 -Part 1：From MDP to DQN
+# 强化学习-Part 1：From MDP to DQN
 
 在我的心目里强化学习一直是一个很难，但是重要性不是很高的知识点。说他重要性不高，其一是很少有“纯”的强化学习的项目，例如完成某个游戏，控制机器人。虽然 2017 年就有 AlphaGo 的轰动，但是我实践中也没有机会使用。即使在 ChatGPT 的出圈后，我简单了解了他所使用的 RLHF 技术，但是认知也是很肤浅的。其二，实践中很少会走到强化学习这一步，很多替代技术能用更简单的方式，更低的成本完成类似的任务，例如 DPO，SimPO。我自然也不会去用深究更复杂的 PPO。最后，可能是来自 Yann LeCun 有一个知名的 PPT 的认知，“纯”强化学习在深度学习的众多方向里面仅仅是一种点缀。
 
