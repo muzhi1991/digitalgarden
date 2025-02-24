@@ -48,7 +48,7 @@ Spark能完成的一些任务：
 
 * Client Mode 与 Cluster Mode：两者最大的区别是Driver程序的位置。如果Driver在本地则是Client Mode（典型地，交互式应用Spark Shell）。如果Driver在集群中的某个Node运行，则是Cluster模式。（对于Yarn模式的Client，Driver在Application Master中）
 
-  ![](https://fodi.limuzhi.us.kg/images/IMG-2589dfa89e201c67.webp)
+  ![](https://fodi.389266.xyz/images/IMG-2589dfa89e201c67.webp)
 
 * Application && Job && Stage && Task：这几个概念十分容易混淆，从左到右由大变小。
 

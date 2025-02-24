@@ -41,23 +41,23 @@
 
 * 邻接表 ：数组与链表相结合的存储方法，数组中为图中的顶点，所关联的链表是与该顶点连接的边，适合表示**稀疏图**
 
-  ![](https://fodi.limuzhi.us.kg/images/IMG-b039c6cdac7dcf18.webp)
+  ![](https://fodi.389266.xyz/images/IMG-b039c6cdac7dcf18.webp)
 
 * 十字链表法：是邻接表的改进方法，对于有向图，便于快速计算入度与出度。
 
-  ![](https://fodi.limuzhi.us.kg/images/IMG-67b734bfcd062068.webp)
+  ![](https://fodi.389266.xyz/images/IMG-67b734bfcd062068.webp)
 
 在 neo4j 数据库中使用了类似**邻接表**的表示方法，每一个 node 节点具有（下图）：
 * 一条指向 Relationships**双向链表**的指针
 * 一条指向 Property 值的的 key-value 链表。
-![](https://fodi.limuzhi.us.kg/images/IMG-cb83ff44859b0d96.webp)
+![](https://fodi.389266.xyz/images/IMG-cb83ff44859b0d96.webp)
 
 每个 Relation 中有（下图）：
 * 边 start 节点的 pre 和 next 指针以及
 * 边 end 节点的 pre 和 next 指针
 * start 与 end 的 id，通过此 id 可以快速定位 node。
 
-![](https://fodi.limuzhi.us.kg/images/IMG-32c0664ba0144723.webp)
+![](https://fodi.389266.xyz/images/IMG-32c0664ba0144723.webp)
 
 我们可以看出通过这个数据结构，方便的实现如下功能：通过图顶点 Vertex A 遍历他的所有边，找到与他关联的节点的值属性值。
 
@@ -82,7 +82,7 @@
 最短路径算法也是十分普遍的算法
 * 单源最短路径：求某个点到其他所有点的最短距离
   * 简介：典型算法 Dijkstra，求图中一点到任何点的距离，当然也可以求两点间的最短距离，算法是贪心思想，将节点看为，全部顶点的集合是 $V$，已选集合 $U$，$V-U$ 为未选集合，每次挑选节点加入集合 $U$，使得**到达出发顶点 $v_0$ 的距离**最小，如此迭代。参考 [wiki](https://zh.wikipedia.org/wiki/戴克斯特拉算法)。
-  * ![|300](https://fodi.limuzhi.us.kg/images/IMG-7fe9d7a59bb415ab.gif)
+  * ![|300](https://fodi.389266.xyz/images/IMG-7fe9d7a59bb415ab.gif)
   * 应用：图中两点间的路由算法，如导航，电话网络等
 
 * 多源最短路径：图中任意两点间的最短距离
@@ -132,7 +132,7 @@
 * [集聚系数](https://zh.wikipedia.org/zh-cn/集聚系数)：局部集聚系数、整体集聚系数
   * 介绍：**描述一个图中的顶点之间结集成 [团](https://zh.wikipedia.org/wiki/團_(圖論))（clique）的程度的系数**。两种系数的含义与计算方法如下
     * 局部集聚系数：**某个顶点**，他相邻的顶点组成的子图中，clique(闭合三角) 的数量占总体两两相连的数量的比值。所以，如果邻接节点两两相连，局部集聚系数为 1，如果邻接节点没有任何联系，集聚系数为 0。可以表示为：$C(i)=\frac{\lambda_{G}\left(v_{i}\right)}{\tau_{G}\left(v_{i}\right)+\lambda_{G}\left(v_{i}\right)}$，其中，分子为顶点 $v_i$ 包含的闭合三角数目，分母为闭合与开放三角数目之和 (也等 k(k-1)/2)
-       <img src="https://fodi.limuzhi.us.kg/images/IMG-16cf7d7606980f45.webp" width="100px" />
+       <img src="https://fodi.389266.xyz/images/IMG-16cf7d7606980f45.webp" width="100px" />
     * 整体集聚系数：可以把**整个图**，看做有 " 闭合三角 " 和 " 开放三角 " 组成的，$G_{\triangle}$ 表示闭合三角个数，$G_{\wedge}$ 表示开放三角个数，整体集聚系数可以表示为 $C_{t o t a l}(G)=\frac{3 \times G_{\Delta}}{3 \times G_{\Delta}+G_{\wedge}}$。另外，分母值的含义是对图中每个顶点分别对它的邻居两两相连的边的和，$C_{t o t a l}(G)=\frac{3 \times G_{\triangle}}{\sum_{i=1}^{n}\left(\begin{array}{c}{k_{i}} \\ {2}\end{array}\right)}$，其中 $k_i$ 是每个顶点边的数目。如果用局部集聚系数表示：$C_{\text {total}}(G)=\frac{\sum_{i=1}^{n} \lambda_{G}\left(v_{i}\right)}{\sum_{i=1}^{n}\left(\tau_{G}\left(v_{i}\right)+\lambda_{G}\left(v_{i}\right)\right)}$，因为 3 个 $G_{\triangle}$ 正好关联了 3 个顶点的闭合三角数目。
   * 应用：整体集聚系数可以给出一个图中整体的集聚程度的评估，而局部集聚系数则可以测量图中每一个结点附近的集聚程度。
 
@@ -165,7 +165,7 @@
     * 如果出现某些顶点边很多的情况，会导致数据不均衡
 
 一个例子如下，下图是对 3 条边的图进行分布，a 是使用边分割的方式，节点 ABCD 的节点数据值存储了一份，但是边的数据有 6 份 (还包含节点的引用，虚节点)，但是每台机器有节点的完整的边信息。b 是使用了点分割，可以看到 123 条边都只存储了一次，单顶点数据却冗余存储
-![](https://fodi.limuzhi.us.kg/images/IMG-6d3dfc51ac05335f.webp)
+![](https://fodi.389266.xyz/images/IMG-6d3dfc51ac05335f.webp)
 当前<font color="#ff0000">主流系统实现均为点分割方式</font>。考虑到**不均衡节点在大图中是常见现象**，以及磁盘成本的下降，使用冗余的节点存储减少网络通信。
 ##### Spark 中的图存储
 
@@ -178,7 +178,7 @@ spark 中图存储的基本方法使用了**点分割**的方式：每台机器�
   * 构建索引，**目的是用 srcid 可以快速找到他的所有边**：相同 src 保留第一个 index,index 中记录的是相同 srcId 中第一个出现的 srcId 与其下标。**相当于可以用 index 快速在上面 localSrcIds/localDstIds 查找了,再向下找就是它的边**
   * 边相关的数据 data，也是用本地 id 存储的，单独存在一个数组里
 
-  ![](https://fodi.limuzhi.us.kg/images/IMG-731347c00b79347c.webp)
+  ![](https://fodi.389266.xyz/images/IMG-731347c00b79347c.webp)
 
 * VertexRDD
   * 由 vertexPartitions 构成，他的数据是从 EdgeRDD 构建而来，vertexPartitions 存储了顶点的路由表和顶点的属性值，生成过程如下
@@ -187,20 +187,20 @@ spark 中图存储的基本方法使用了**点分割**的方式：每台机器�
   * 对每个点分区构建路由表：可以用点的 (VertexId, Int) 信息快速查找到这个顶点相关的边在哪个 EdgePartiton（通过 pid），见下图的 RoutingTablePartition
   * 成 ShippableVertexPartition：构建存储点属性，合并相同重复点的属性 attr 对象，补全缺失的 attr 对象
 
-    ![](https://fodi.limuzhi.us.kg/images/IMG-ab9f7aac3fcfffe9.webp)
+    ![](https://fodi.389266.xyz/images/IMG-ab9f7aac3fcfffe9.webp)
 
 #### 分布式图计算模型
 
 图计算的基本思想是 BSP 模型，即 Bulk Synchronous Parallell(分布式批同步)，他的基本思想是将图的计算**分解成一系列串行的 superstep(超步)**:
 
-![](https://fodi.limuzhi.us.kg/images/IMG-82791b9e3d4f4e17.webp)
+![](https://fodi.389266.xyz/images/IMG-82791b9e3d4f4e17.webp)
 
 每一个超步内部强调计算与通讯分离，具体而言包含三个阶段：
 * 并行计算 (local computation)：在本地进行计算，无外部的数据访问
 * 全局通信 (非本地数据通信)：发送数据给其他节点
 * 栅栏同步 (等待通信行为结束)：同步阶段，等待所有节点都接收到数据
 
-![](https://fodi.limuzhi.us.kg/images/IMG-eb055b2a3a7f2e28.webp)
+![](https://fodi.389266.xyz/images/IMG-eb055b2a3a7f2e28.webp)
 
 > 我们发现上述模型也有类似与 shuffle 的过程，但是对比 MR，BSP 模型具有下列不同：
 >
@@ -215,7 +215,7 @@ BSP 的有两种常见的计算框架：
 * Pregel 框架：该实现中**以 " 顶点 " 为中心**，对顶点应用函数进行计算并且顶点的值可以修改。而边没有任何计算与修改。
   * 在每个 superstep 中，每个顶点具有 active 和 inactive 两个状态。收到消息后就会变为 active 状态，并执行用户定义的同一个函数。这个函数可以对其他邻接边发出 msg，修改自身的值，或者判断满足某些条件后把顶点人工 halt 为 inactive
 
-    ![](https://fodi.limuzhi.us.kg/images/IMG-5ae47ecfa106a4b2.webp)
+    ![](https://fodi.389266.xyz/images/IMG-5ae47ecfa106a4b2.webp)
 
   * 当系统中没有消息再 active 节点时，所有节点都是 inactive 状态，算法迭代终止
   * 主要缺点：如果遇到某个节点有众多的边，会导致数据不均衡，某个节点运行时间过长。**降低了算法的并发性**。ps：非常类似于边分割存储的问题！
@@ -225,11 +225,11 @@ BSP 的有两种常见的计算框架：
   * scatter：顶点更新完成之后，更新边上的数据，并通知对其有依赖的邻结顶点更新状态。在 `scatter` 过程中，工作顶点只读，边上数据可写。(对比 Pregel，注意这里边的数据可以修改)
   * 存储结构如下：
 
-    ![](https://fodi.limuzhi.us.kg/images/IMG-ec41380cfe4fa19c.webp)
+    ![](https://fodi.389266.xyz/images/IMG-ec41380cfe4fa19c.webp)
 
   * 计算过程如下：
 
-    ![](https://fodi.limuzhi.us.kg/images/IMG-d7721ed7a4fa0e59.webp)
+    ![](https://fodi.389266.xyz/images/IMG-d7721ed7a4fa0e59.webp)
 
 下面是分别使用 Pregel 框架和 GraphLab 框架实现 pagerank 的伪代码：
 
@@ -371,7 +371,7 @@ Pregel(pagerankGraph, initialMessage, numIter)(
 * 社区内部，顶点相对接近/密集
 * 不同社区之间，顶点相对疏远/稀疏
 
-![](https://fodi.limuzhi.us.kg/images/IMG-9170f4e9a014fa97.webp)
+![](https://fodi.389266.xyz/images/IMG-9170f4e9a014fa97.webp)
 
  从上述定义可以看出：社区是一个比较含糊的概念，只给出了一个定性的刻画。
 
@@ -659,25 +659,25 @@ communityRDD = louvainGraph.aggregateMessages(sendCommunityData, mergeCommunityM
 
 1. 导入数据，数据格式，为 tsv，即 tab 分隔的边
 
-![](https://fodi.limuzhi.us.kg/images/IMG-6eaf83cd310556e4.webp)
+![](https://fodi.389266.xyz/images/IMG-6eaf83cd310556e4.webp)
 
-![](https://fodi.limuzhi.us.kg/images/IMG-efaeed8ba3fc3221.webp)
+![](https://fodi.389266.xyz/images/IMG-efaeed8ba3fc3221.webp)
 
 2. 点击右侧，模块化的运行按钮启动运行算法
 
-![](https://fodi.limuzhi.us.kg/images/IMG-52f0acaaaa66dc3d.webp)
+![](https://fodi.389266.xyz/images/IMG-52f0acaaaa66dc3d.webp)
 
 3. 此时在数据页面出现新的一列，表示分类结果
 
-![](https://fodi.limuzhi.us.kg/images/IMG-7a287572b3a8e9d6.webp)
+![](https://fodi.389266.xyz/images/IMG-7a287572b3a8e9d6.webp)
 
 4. 在图中展示结果，给节点上色
 
-![](https://fodi.limuzhi.us.kg/images/IMG-161acf57ab2df8ee.webp)
+![](https://fodi.389266.xyz/images/IMG-161acf57ab2df8ee.webp)
 
 5. 挑选一直算法尝试调整图的布局分布
 
-![](https://fodi.limuzhi.us.kg/images/IMG-0bf85046dd5dff6e.webp)
+![](https://fodi.389266.xyz/images/IMG-0bf85046dd5dff6e.webp)
 
 ### 总结
 

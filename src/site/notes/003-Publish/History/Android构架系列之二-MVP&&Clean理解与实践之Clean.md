@@ -27,7 +27,7 @@
 > 架构是一种高层思想，我这里只是从Demo中学习，其实Clean有无数种实现方式，比如，依赖的解耦可以用接口，也可以用命令等等，这些其实是细节！
 
 ## 理解Clean
-![](https://fodi.limuzhi.us.kg/images/IMG-f6ab5734ad0a16cf.webp)
+![](https://fodi.389266.xyz/images/IMG-f6ab5734ad0a16cf.webp)
 这张图可是说是理解Clean的核心，第一次学习Clean就看到了这张图，留下了满满的疑惑，甚至被误解了。相关误解看[这个Issue](https://github.com/android10/Android-CleanArchitecture/issues/136)
 > The one you are citing shows how data flow through the layers, not dependencies or relation of the layers between themselves
 
@@ -70,7 +70,7 @@ Data         |与Domain同线程   |**同步调用**
 ### Clean与MVP
 Clean是一种**分层构架**，软件架构模式/思想！MVX更像设计模式。构架是一种静态的形式，Clean构架告诉你需要把业务逻辑从M中单独拿出来，分成BLL和DAL。所以Clean是更高的抽象，MVX更详细的设计，还会告诉你数据如何流动。这样的表述更合理：**Clean构架是在MVP上使用了三层构架！**
 
-![](https://fodi.limuzhi.us.kg/images/IMG-29f1921f0ec7371f.webp)
+![](https://fodi.389266.xyz/images/IMG-29f1921f0ec7371f.webp)
 
 ## 代码设计
 Presentation属于视图层，一般使用MVP，Domain和Data属于Model层，在移动App中应当很薄（很多Demo就是透传了数据。。）这里粗浅的说一下，以后有专门的文章讲Model层设计。

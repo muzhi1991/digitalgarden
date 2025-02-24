@@ -6,7 +6,7 @@
 ## 发布模式
 gitk --simplify-by-decoration --all
 
-![](https://fodi.limuzhi.us.kg/images/IMG-b7c34039548040e5.webp)
+![](https://fodi.389266.xyz/images/IMG-b7c34039548040e5.webp)
 猜测：
 * v0.7.0之前，发布模式是在发布当前主版本（如v0.5.0）时，
   * 继续用当前分支作为主版本的子版本开发（v0.5.1），对0.5.0的版本进行bug处理（master发布）
@@ -136,8 +136,8 @@ https://spark.apache.org/news/index.html
 * pyspark bug，增加操作
 
 > issue tracker使用：[地址](http://s.apache.org/d0t)
-> ![](https://fodi.limuzhi.us.kg/images/IMG-9d6c05f1f19187bb.webp)
-> ![](https://fodi.limuzhi.us.kg/images/IMG-9a3845b309294d77.webp)
+> ![](https://fodi.389266.xyz/images/IMG-9d6c05f1f19187bb.webp)
+> ![](https://fodi.389266.xyz/images/IMG-9a3845b309294d77.webp)
 
 ### 1.0.x
 * yarn安全模式整合？？
@@ -439,7 +439,7 @@ New Algorithms: SPARK-9471 multilayer perceptron classifier, SPARK-6487 PrefixSp
   * 用Off-heap内存管理运行时和cache内存
   * **使用sketches库实现了近似统计算法**，[sketches library](https://datasketches.github.io/)：包括approximate quantile, Bloom filter, count-min sketch等算法
   * Hive 表存储支持 bucketing方式，`bucketBy`
-  ![](https://fodi.limuzhi.us.kg/images/IMG-5ec6db1cf3ec7a18.webp)
+  ![](https://fodi.389266.xyz/images/IMG-5ec6db1cf3ec7a18.webp)
 * 性能
   *  **spark-sql支持了whole stage code generation**
   *  通过vectorization提升parquet扫描性能

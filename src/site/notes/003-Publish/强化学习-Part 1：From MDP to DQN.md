@@ -6,7 +6,7 @@
 
 在我的心目里强化学习一直是一个很难，但是重要性不是很高的知识点。说他重要性不高，其一是很少有“纯”的强化学习的项目，例如完成某个游戏，控制机器人。虽然 2017 年就有 AlphaGo 的轰动，但是我实践中也没有机会使用。即使在 ChatGPT 的出圈后，我简单了解了他所使用的 RLHF 技术，但是认知也是很肤浅的。其二，实践中很少会走到强化学习这一步，很多替代技术能用更简单的方式，更低的成本完成类似的任务，例如 DPO，SimPO。我自然也不会去用深究更复杂的 PPO。最后，可能是来自 Yann LeCun 有一个知名的 PPT 的认知，“纯”强化学习在深度学习的众多方向里面仅仅是一种点缀。
 
-![image.png](http://fodi.limuzhi.us.kg/images/IMG-f0053231f89cb1fd.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-f0053231f89cb1fd.webp)
 
  然而，随着近期强化学习在 LLM 领域做出了非常 promising 的结果（特指 Deepseek R1），甚至下一个阶段的 scaling law 都与之相关，让我不得不强行“入门”强化学习，系统性地学习。这里我们不谈 Agent，Robot 领域的强化学习的应用，仅从“调整”语言模型的角度看看，如何把强化学习系列技术人引入到 LLM 中，挖掘模型的潜力，从而做到极强的泛化性（甚至是推理能力）。然而在开始之前，我们不得不从强化学习的基础开始，试图揣测这种泛化性从何而来？或者这些强化学习算法是不是这轮推理模型 hyper 的能力来源？
 
@@ -18,7 +18,7 @@
 	* deepseek r1
 	* deepseekMath
 
-![image.png](http://fodi.limuzhi.us.kg/images/IMG-ad9020533585aedb.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-ad9020533585aedb.webp)
 总体思路：
 * 对决策过程进行建模 MDP
 * 求解该模型，对策略进行评估&&获得最优策略
@@ -48,9 +48,9 @@
 $$
 ( S, A, P_{a}, R_{a} ) 
 $$
-![image.png](http://fodi.limuzhi.us.kg/images/IMG-42c5330798cc8919.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-42c5330798cc8919.webp)
 一个更具象的例子：
-![image.png](http://fodi.limuzhi.us.kg/images/IMG-d3abdcdaa2603678.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-d3abdcdaa2603678.webp)
 元组中的每个元素的含义如下
 * $S$ 状态空间的**集合** State，也叫状态空间，例如，游戏图像所有像素点的输入，语言模型的 Token 序列 (<t)
 * $A$ 动作的**集合** Action，也叫动作空间，例如，游戏的前后左右，语言模型的下一个 Token
@@ -63,7 +63,7 @@ $$
 * 策略（Policy），$\pi( s )$ 根据某个状态输出行动 action
 
 在参考资料 [课程](https://www.bilibili.com/video/BV1sd4y167NS/?p=3&share_source=copy_web&vd_source=febc27170e9bf9e22c2c050dedadc6be) 的中的总结更清晰：
-![image.png](http://fodi.limuzhi.us.kg/images/IMG-ebaae621edcffa72.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-ebaae621edcffa72.webp)
 简而言之，我们可以把 MDP 涉及到的概念分为几类
 * 集合：状态，动作，奖励
 * 概率分布：状态转移概率，奖励的概率（与上面的奖励集合组合起来就是 $R_{a}$）
@@ -82,7 +82,7 @@ $$
 	* $S_{t}, A_{t} \to S_{t+1}$ is governed by $p ( S_{t+1}=s^{\prime} | S_{t}=s, A_{t}=a )$
 * 轨迹 trajectory && episode，就是一条决策的路径，包括（经过的前、后状态、采取的行动以及获得的奖励）。如果 trajectory 可以简单理解为 episode 里面的一段有限的路径。
 * Return：一条轨迹的累计的 Reward 的和，是个**随机变量**（Reward 也是随机变量）
-* 长期累计奖励（Discounted Return）随机变量 $G_{t}=R_{t}+\gamma R_{t+1}+\gamma^{2} R_{t+2}+\ldots$
+* 长期累计奖励（Discounted Reward）**随机变量** $G_{t}=R_{t}+\gamma R_{t+1}+\gamma^{2} R_{t+2}+\ldots$
 * state value：$v_{\pi} ( s )=\mathbb{E} [ G_{t} | S_{t}=s ]$，即 $G_t$ 的条件**期望**，评价某个状态 $s$ 下的具体的价值。
 * action value：$q_{\pi} ( s, a )=\mathbb{E}_{\pi} \left[ G_{t} \mid S_{t}=s, A_{t}=a \right]$，执行评价某个状态 $s$ 下，执行某个 action 的具体的价值。
 
@@ -237,7 +237,7 @@ $$
 
 下面是 MC Exploring Starts 结合 ε-greedy 策略的算法（使用 Every-Visit 提升 episode 利用率，以及 episode 从后向前遍历计算减少重复计算 ）
 
-![image.png](https://fodi.limuzhi.us.kg/images/IMG-2f4f1a0ddda53a57.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-2f4f1a0ddda53a57.webp)
 
 可以看到 MC 算法的特点是：
 * 我们不需要任何对 state 和 value 的 guess，只要对数据 sample 就行
@@ -266,7 +266,7 @@ $$
 * $a_k$ 是一个正的系数
 
 对于算法有效性的一个直观的理解如下图
-![image.png](https://fodi.limuzhi.us.kg/images/IMG-6d65cc673ebf89e3.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-6d65cc673ebf89e3.webp)
 
 我们可以考察一个特别熟悉的算法**随机梯度下降（SGD）**，其实他是 RM 算法推导出来的一个特例。在 SDG 中，我们优化的目标是最小化下面的 cost function
 $$
@@ -312,7 +312,7 @@ $$
 如果我们使用上一小节的方法估计 state value，在不知道转移分布和 Reward 分布的情况下（即 Model free），我们是无法求出 Action Value 的，也就没有办法获得最优策略。因此，我们可以用下面的 Sarsa 算法。
 下面是 Sarsa 算法（state-action-reward-state-action）求解 action value 结合策略提升来获取最优策略的算法：
 
-![image.png](https://fodi.limuzhi.us.kg/images/IMG-9a112cbccd2f1c70.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-9a112cbccd2f1c70.webp)
 
 对于 action value 的算法，和上面 state value 基本一致，有一些区别如下：
 * 需要的数据是 episode 里面的 $\{( s_{t}, a_{t}, r_{t+1}, s_{t+1},a_{t+1} ) \}_{t}$,（即 state-action-reward-state-action）
@@ -385,9 +385,9 @@ $$
 > PS： Model-based 的方法不需要区分 On-policy / Off-Policy 因为他们不需要与环境交互获取样本。Model-based 使用动态规划方法，所有计算均基于模型的理论推导，与策略的交互无关
 
 下面我们仔细分析一下 Q-Learning 是 off-policy 的说法，这里的确切含义是，Q-Learning 既可以是 on-policy，也可以是 off-policy 的（可以把 on-policy 看作 off-policy 的一种特殊情况），下面分别给出 on-policy 和 off-policy 版本的 Q-Learning 算法：
-![image.png](https://fodi.limuzhi.us.kg/images/IMG-81d10d003283d888.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-81d10d003283d888.webp)
 
-![image.png](https://fodi.limuzhi.us.kg/images/IMG-28c3c50dc39ae66d.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-28c3c50dc39ae66d.webp)
 对比这两个算法，他们的 **update q-value 部分完全相同**，但是有一些核心的不同：
 * 数据生成方式不同
 	* on-policy 的版本中数据是每一轮迭代生成的，即根据 updated 后的 policy 采样的（可以看出 target 和 behavio 相同策略）
@@ -441,7 +441,7 @@ $$
 
 > 这里理解 TD 算法， $v_{\pi} ( s_{t} )$ 的期望形式为 $v_{\pi} ( s )=\mathbb{E} {\big[} R+\gamma G | S=s {\big]}, \quad s \in{\mathcal{S}}$, 在已知 $r_{t+1}$ 和 $s_{t+1}$ 的情况下，可以展开为 $v_{\pi} ( s_{t} ) = r_{t+1}+\gamma {v_{\pi}} ( s_{t+1} )$
 
-![image.png](https://fodi.limuzhi.us.kg/images/IMG-e279c9b2e0354639.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-e279c9b2e0354639.webp)
 
 #### Action Value 函数近似
 类似的思想，当我应用到 Action Value 里面（结合 Sarsa 的 TD target 推导出来的）
@@ -449,14 +449,14 @@ $$
 w_{t+1}=w_{t}+\alpha_{t} \Big[ r_{t+1}+\gamma\hat{q} ( s_{t+1}, a_{t+1}, w_{t} )-\hat{q} ( s_{t}, a_{t}, w_{t} ) \Big] \nabla_{w} \hat{q} ( s_{t}, a_{t}, w_{t} ). 
 $$
 上述的公式求解 action value $q(s,a)$ 是 Policy Evaluation，结合 Policy Improvement 来求解最优策略的方法如下：
-![image.png](http://fodi.limuzhi.us.kg/images/IMG-dbbc39b086d4e549.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-dbbc39b086d4e549.webp)
 值近似版本的 Sarsa 算法和前面的 Sarsa 算法一样都是 on-Policy 的方法，需要一个具有探索性的策略
 再次，当我们把上述方法应用到 Q-Learning 方法中（结合 Q-Learning 的 TD target 推导）
 $$
 w_{t+1}=w_{t}+\alpha_{t} \Big[ r_{t+1}+\gamma\operatorname* {m a x}_{a \in\mathcal{A} ( s_{t+1} )} \hat{q} ( s_{t+1}, a, w_{t} )-\hat{q} ( s_{t}, a_{t}, w_{t} ) \Big] \nabla_{w} \hat{q} ( s_{t}, a_{t}, w_{t} ), 
 $$
 对于前面我们讲的 Q-Learning 提供了两个版本 on-Policy 和 off-Policy，
-![image.png](http://fodi.limuzhi.us.kg/images/IMG-fab8782fb6471c43.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-fab8782fb6471c43.webp)
 
 #### DQN
 
@@ -467,7 +467,7 @@ $$
 w_{t+1}=w_{t}+\alpha_{t} \Big[ r_{t+1}+\gamma\operatorname* {m a x}_{a \in\mathcal{A} ( s_{t+1} )} \hat{q} ( s_{t+1}, a, w_{t} )-\hat{q} ( s_{t}, a_{t}, w_{t} ) \Big] \nabla_{w} \hat{q} ( s_{t}, a_{t}, w_{t} ), 
 $$
 这里我们用一个神经网络来实现 $\hat{q} ( s_{t}, a_{t}, w_{t} )$ ，让模型输出值等于上式的 TD target（即训练的 ground truth）。就是在解决一个回归问题
-![image.png](https://fodi.limuzhi.us.kg/images/IMG-0f189730d763b1c3.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-0f189730d763b1c3.webp)
 > PS：我们这里描述的情况的网络类似上图中间的结构，实际算法中使用的则是有图的结构，即模型的输入是状态 $s$, 输出是多个 action 的值。（action 的数量一般认为有限个）
 
 训练神经网络的 loss 如下（MSE）：
@@ -517,7 +517,7 @@ $$
 
 ##### Off-Policy DDQN 算法
 下面是一个 off-policy 算法版本 DDQN（来自视频教程）
-![image.png](https://fodi.limuzhi.us.kg/images/IMG-bf3cf652a2d15c57.webp)
+![image.png](https://fodi.389266.xyz/images/IMG-bf3cf652a2d15c57.webp)
 要点与问题：
 * 这里的 off-policy 非常彻底，behavior policy 是 $\pi_b$，在算法开始前 sample 数据放入 replay buffer，后面就没有再 sample 了。
 * 每次迭代开始，都是从 buffer 里面 sample batch 数据来训练神经网络

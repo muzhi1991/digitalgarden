@@ -77,7 +77,7 @@
 * **`PCollections`**：表示可以执行并行（这里的P表示的含义）的转换（Transform）操作的数据集（可能非常大）
 * **`PTransforms`**：应用到PCollection上，来执行的转换操作，生成新的PCollection。PTransforms可以是对元素一个一个操作，也可以是聚集（agg）操作，或者可以与其他的PCollection相互组合。
 
-![20241212105125385](https://fodi.limuzhi.us.kg/images/IMG-ffe5152f18515401.webp)
+![20241212105125385](https://fodi.389266.xyz/images/IMG-ffe5152f18515401.webp)
 
 如果有疑问或者想查看DataFlow的文档，看[这里](https://cloud.google.com/dataflow/model/programming-model)。
 
@@ -109,7 +109,7 @@ PCollection<KV<String, Integer>> scores = input
 
 如上次讨论的那样，窗口化是沿着时间边界分割数据源的过程。常见的窗口划分策略包括固定窗口，滑动窗口和会话窗口。
 
-![20241212105125455](https://fodi.limuzhi.us.kg/images/IMG-8a6ccca5ab6c41ca.webp)
+![20241212105125455](https://fodi.389266.xyz/images/IMG-8a6ccca5ab6c41ca.webp)
 
 看一个实际的例子：把上面的求和的 pipeline 划分为 2 分钟的固定时间窗口。使用 DataflowSDK，添加一个 `Window.into` transform 操作即可：
 
@@ -140,7 +140,7 @@ Watermark 可以给出"何时将计算结果输出？"这个问题的一半答�
 
 回想一下 Streaming 101 中的这个图，这里稍作修改，其中描述了事件时间和处理时间之间的偏差（skew），在真实的分布式系统中，这个偏差会随时间不断变化。
 
-![20241212105125671](https://fodi.limuzhi.us.kg/images/IMG-d2311396b61f7b27.webp)
+![20241212105125671](https://fodi.389266.xyz/images/IMG-d2311396b61f7b27.webp)
 
 上面这个红色曲线就是真实的 Watermark，随着 Processing-Time 的推移，他描述了 Event-Time 纬度的完整性的过程。你可以把 Watermark 看成是 F (P) -> E 的函数：输入是 Processing-Time，输出是 Event-Time。（确切的说，函数的输入是在 pipeline 中被观测到的 Watermark 这一点的所有上游的当前状态：输入源，缓冲数据，正在处理的数据等；但在概念上，将其视为从 Processing-Time 到 Event-Time 的映射更为简单。）在 Event-Time 上的这一点 E 表示：系统相信在 E 之前的所有数据都被观测到了。换句话说，系统『确信』不会再有 Event-Time<E 的数据出现了。根据这种『确信』是不是严格保证或者仅仅是猜想，我们把 Watermark 分为两种类型：完美 Watermark 与启发式 Watermark。
 
@@ -354,7 +354,7 @@ PCollection<KV<String, Integer>> scores = input
 
 让我们把图 7（只有启发式的版本），9，10 放到一起比较一下：
 
-![20241212105125848](https://fodi.limuzhi.us.kg/images/IMG-860d7d4e9943e1e4.webp)
+![20241212105125848](https://fodi.389266.xyz/images/IMG-860d7d4e9943e1e4.webp)
 
 你可以想到，在存储和计算成本方面，丢弃模式，累计模式，累计&更正模式成本是不断增加的。为此，积累模式的选择也是对正确性，延迟和成本进行权衡。
 
@@ -479,7 +479,7 @@ Session 是一种比较特殊的窗口，它会用某段不活动的间隔为界
 
 要提供通用的 Session 支持，一个核心的洞察是：**一个 Session Window 可以看成是相互重叠的小 Window 的组合，其中这里的小 Window（ proto-session window）比较特别，他们只含有一个 Record，窗口大小是 inactivity 的时间。因此，即使我们看到的数据是无序的，我们可以随着数据一个一个来到，简单地把这些有重叠的小 Window 合并起来组成一个最终的 Session Window。**
 
-![20241212105125947](https://fodi.limuzhi.us.kg/images/IMG-d858f21011c62f17.webp)
+![20241212105125947](https://fodi.389266.xyz/images/IMG-d858f21011c62f17.webp)
 
 我们来看一个代码示例，通过使用 Listing 8 的代码（包含了 early/late 触发器和 retract 的更新机制）来构建 Session：
 
@@ -535,10 +535,10 @@ PCollection<KV<String, Integer>> scores = input
 
 图 18. 相同输入数据，对应 9 种不同的产出
 
-| ![20241212105126183](https://fodi.limuzhi.us.kg/images/IMG-695617e4e38222f6.webp) Classic batch: [Listing 1](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L1) / [Figure 2](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG2)                 | ![20241212105126276](https://fodi.limuzhi.us.kg/images/IMG-3c2c05b1dc1b1f24.webp) Fixed windows batch: [Listing 2](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L2) / [Figure 4](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG4)                                                                                  | ![20241212105126519](https://fodi.limuzhi.us.kg/images/IMG-483962b3e886f9b3.webp) Fixed windows streamingwatermark: [Listing 2](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L2) / [Figure 6](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG6) |
+| ![20241212105126183](https://fodi.389266.xyz/images/IMG-695617e4e38222f6.webp) Classic batch: [Listing 1](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L1) / [Figure 2](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG2)                 | ![20241212105126276](https://fodi.389266.xyz/images/IMG-3c2c05b1dc1b1f24.webp) Fixed windows batch: [Listing 2](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L2) / [Figure 4](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG4)                                                                                  | ![20241212105126519](https://fodi.389266.xyz/images/IMG-483962b3e886f9b3.webp) Fixed windows streamingwatermark: [Listing 2](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L2) / [Figure 6](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG6) |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![20241212105126612](https://fodi.limuzhi.us.kg/images/IMG-a5512113c6e0c896.webp) Early/late discarding: [Listing 7](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L7) / [Figure 9](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG9)         | ![20241212105126813](https://fodi.limuzhi.us.kg/images/IMG-87de848e44cde18d.webp) Early/late accumulatingListings: [4](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L4) & [5](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L5) / [Figure 7](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG7) | ![20241212105126929](https://fodi.limuzhi.us.kg/images/IMG-f7944343c7a67d31.webp)  Early/late retracting: [Listing 8](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L8) / [Figure 10](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG10)         |
-| ![20241212105127034](https://fodi.limuzhi.us.kg/images/IMG-2dad0493ca013959.webp)  Processing-time (triggers): [Listing 9](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L9) / [Figure 14](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG14) | ![20241212105127145](https://fodi.limuzhi.us.kg/images/IMG-151fde0313842de0.webp) Processing-time: (ingress time) [Listing 10](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L10) / [Figure 15](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG15)                                                                   | ![20241212105127231](https://fodi.limuzhi.us.kg/images/IMG-b866f4c8435face8.webp) Sessions: [Listing 11](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L11) / [Figure 17](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG17)                     |
+| ![20241212105126612](https://fodi.389266.xyz/images/IMG-a5512113c6e0c896.webp) Early/late discarding: [Listing 7](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L7) / [Figure 9](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG9)         | ![20241212105126813](https://fodi.389266.xyz/images/IMG-87de848e44cde18d.webp) Early/late accumulatingListings: [4](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L4) & [5](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L5) / [Figure 7](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG7) | ![20241212105126929](https://fodi.389266.xyz/images/IMG-f7944343c7a67d31.webp)  Early/late retracting: [Listing 8](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L8) / [Figure 10](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG10)         |
+| ![20241212105127034](https://fodi.389266.xyz/images/IMG-2dad0493ca013959.webp)  Processing-time (triggers): [Listing 9](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L9) / [Figure 14](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG14) | ![20241212105127145](https://fodi.389266.xyz/images/IMG-151fde0313842de0.webp) Processing-time: (ingress time) [Listing 10](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L10) / [Figure 15](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG15)                                                                   | ![20241212105127231](https://fodi.389266.xyz/images/IMG-b866f4c8435face8.webp) Sessions: [Listing 11](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#L11) / [Figure 17](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102#FIG17)                     |
 
 图 18：**相同输入数据，对应 9 种不同的产出.** Credit: Tyler Akidau.
 

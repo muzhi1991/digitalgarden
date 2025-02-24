@@ -132,7 +132,7 @@
 
 ### 调用流程
 
-![nodeclub数据流动](https://fodi.limuzhi.us.kg/images/IMG-3c272c682a163cf5.webp)
+![nodeclub数据流动](https://fodi.389266.xyz/images/IMG-3c272c682a163cf5.webp)
 
 注意一下，操作model这里有点乱，很多地方都操作了，如proxy，common中的一写工具，controllers下的控制器直接操作model。api目录下的RestfulAPI也有直接操作的。理想情况下：所有的model操作都在proxy中。controller api common中都引用proxy操作。问题是：比较麻烦，很多简单操作要多封装一层。
 

@@ -169,14 +169,14 @@ server {
     * 一致性
     * 需要2倍机器—解决方案：两台机器互为Master-Slave复制
 
-  ![master-slave模式](https://fodi.limuzhi.us.kg/images/IMG-77703e55891dfd1d.webp)
+  ![master-slave模式](https://fodi.389266.xyz/images/IMG-77703e55891dfd1d.webp)
 
 * 多级缓存：在master/slave模式上再加一层L1Cache。形成多级缓存，L1Cache有多个实例，实现负载均衡。
 
   * 过程：前端请求首先会随机请求到一组L1缓存，如果这个L1缓存命中则返回，否则再请求到主缓存，如果命中，返回，同时将key-value回种到这个L1缓存中。如果主缓存中没有中，则穿透到DB，返回并同时回种到主缓存及刚才那个L1缓存。L1缓存可以有多组，很好的分担了带宽的压力，并且可以线性扩展
   * 引入的问题：一致性
 
-  ![带有L1的多级缓存](https://fodi.limuzhi.us.kg/images/IMG-e8366fc8149e07cc.webp)
+  ![带有L1的多级缓存](https://fodi.389266.xyz/images/IMG-e8366fc8149e07cc.webp)
 
 * 数据一致性CAP问题：上面的所有情况都会面临数据一致性的问题，针对这个问题有一个理论，既CAP下面三条不可能同时满足：
 
@@ -248,7 +248,7 @@ server {
 
     * 结构图
 
-     ![image.png](https://fodi.limuzhi.us.kg/images/IMG-9790f6c962b98ed0.webp)
+     ![image.png](https://fodi.389266.xyz/images/IMG-9790f6c962b98ed0.webp)
 
 * 基本操作：可以参考[这个指南](https://www.gitbook.com/book/yeasy/docker_practice)
   * **查看所有镜像**：`docker images`
