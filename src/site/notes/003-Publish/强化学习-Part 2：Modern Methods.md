@@ -282,7 +282,7 @@ $$
 > 为什么不能直接在 On-Policy 中采样多个 episode，然后 update 多次参数呢？
 > 因为 update 参数之后，策略参数的分布就变了，如果多次更新，旧的 episode 和新的策略就不一致了。其实这个处理方法和 off-policy 一样。
 
-回忆我们学习的A2C 方法， on-policy 版本策略参数的更新公式如下：
+回忆我们学习的 A2C 方法， on-policy 版本策略参数的更新公式如下：
 $$
 \theta_{t+1}=\theta_{t}+\alpha_{\theta} \delta_{t} \nabla_{\theta} \operatorname{l n} \pi( a_{t} | s_{t}, \theta_{t} ) 
 $$
