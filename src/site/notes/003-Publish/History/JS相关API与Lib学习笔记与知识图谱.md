@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/JS相关API与Lib学习笔记与知识图谱.md","permalink":"/History/JS相关API与Lib学习笔记与知识图谱/","title":"JS相关API/Lib学习笔记与知识图谱","tags":["技术","全栈","javascript","web开发"],"created":"2016-07-30 10:10:40","updated":"2016-07-30 10:10:40"}
+{"dg-publish":true,"dg-path":"History/JS相关API与Lib学习笔记与知识图谱.md","permalink":"/History/JS相关API与Lib学习笔记与知识图谱/","title":"JS相关API/Lib学习笔记与知识图谱","tags":["技术","全栈","javascript","web开发"],"created":"2016-07-30 10:10:40","updated":"2016-07-30 10:10:40","dg-note-properties":{"title":"JS相关API/Lib学习笔记与知识图谱","aliases":[],"tags":["技术","全栈","javascript","web开发"],"date created":"2016-07-30 10:10:40","date modified":"2016-07-30 10:10:40","status":"Done"}}
 ---
 
 

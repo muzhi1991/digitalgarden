@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/fp-scala-part1.md","permalink":"/History/fp-scala-part1/","title":"Scala函数式编程-Part1","tags":["技术","Scala","函数式编程"],"created":"2018-03-18 17:29:08","updated":"2018-03-18 17:29:08"}
+{"dg-publish":true,"dg-path":"History/fp-scala-part1.md","permalink":"/History/fp-scala-part1/","title":"Scala函数式编程-Part1","tags":["技术","Scala","函数式编程"],"created":"2018-03-18 17:29:08","updated":"2018-03-18 17:29:08","dg-note-properties":{"title":"Scala函数式编程-Part1","aliases":[],"tags":["技术","Scala","函数式编程"],"date created":"2018-03-18 17:29:08","date modified":"2018-03-18 17:29:08","status":"Done"}}
 ---
 
 

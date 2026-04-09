@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/搞Android这三年与我的未来十年.md","permalink":"/History/搞Android这三年与我的未来十年/","title":"搞Android这三年与我的未来十年","tags":["技术","总结","Android"],"created":"2016-10-31 16:17:00","updated":"2016-10-31 16:17:00"}
+{"dg-publish":true,"dg-path":"History/搞Android这三年与我的未来十年.md","permalink":"/History/搞Android这三年与我的未来十年/","title":"搞Android这三年与我的未来十年","tags":["技术","总结","Android"],"created":"2016-10-31 16:17:00","updated":"2016-10-31 16:17:00","dg-note-properties":{"title":"搞Android这三年与我的未来十年","aliases":[],"tags":["技术","总结","Android"],"date created":"2016-10-31 16:17:00","date modified":"2016-10-31 16:17:00","status":"Done"}}
 ---
 
 

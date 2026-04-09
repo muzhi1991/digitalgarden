@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/spark-version-release-way.md","permalink":"/History/spark-version-release-way/","title":"Spark项目发布模式&&各个版本特性（持续更新）","tags":["技术","大数据","Spark"],"created":"2018-2-21 10:49:01","updated":"2018-2-21 10:49:01"}
+{"dg-publish":true,"dg-path":"History/spark-version-release-way.md","permalink":"/History/spark-version-release-way/","title":"Spark项目发布模式&&各个版本特性（持续更新）","tags":["技术","大数据","Spark"],"created":"2018-2-21 10:49:01","updated":"2018-2-21 10:49:01","dg-note-properties":{"title":"Spark项目发布模式&&各个版本特性（持续更新）","aliases":[],"tags":["技术","大数据","Spark"],"date created":"2018-2-21 10:49:01","date modified":"2018-2-21 10:49:01","status":"Done"}}
 ---
 
 

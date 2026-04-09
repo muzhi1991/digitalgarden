@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"强化学习-Part 2：Modern Methods.md","permalink":"/强化学习-Part 2：Modern Methods/","title":"强化学习 -Part 2：Modern Methods","created":"2025-02-17 17:09:54","updated":"2025-02-17 17:59:49"}
+{"dg-publish":true,"dg-path":"强化学习-Part 2：Modern Methods.md","permalink":"/强化学习-Part 2：Modern Methods/","title":"强化学习 -Part 2：Modern Methods","created":"2025-02-17 17:09:54","updated":"2025-02-17 17:59:49","dg-note-properties":{"title":"强化学习 -Part 2：Modern Methods","aliases":[],"tags":[],"status":"Draft","date created":"2025-02-17 17:09:54","date modified":"2025-02-17 17:59:49"}}
 ---
 
 # 强化学习 -Part 2：Modern Methods

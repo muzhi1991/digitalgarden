@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Android构架系列之二-常见框架分析.md","permalink":"/History/Android构架系列之二-常见框架分析/","title":"Android构架系列之二--常见框架分析(一）","tags":["技术","Android","主框架"],"created":"2016-04-04 10:09:42","updated":"2016-04-04 10:09:42"}
+{"dg-publish":true,"dg-path":"History/Android构架系列之二-常见框架分析.md","permalink":"/History/Android构架系列之二-常见框架分析/","title":"Android构架系列之二--常见框架分析(一）","tags":["技术","Android","主框架"],"created":"2016-04-04 10:09:42","updated":"2016-04-04 10:09:42","dg-note-properties":{"title":"Android构架系列之二--常见框架分析(一）","aliases":[],"tags":["技术","Android","主框架"],"date created":"2016-04-04 10:09:42","date modified":"2016-04-04 10:09:42","status":"Done"}}
 ---
 
 

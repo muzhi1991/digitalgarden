@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Android注入框架Dagger2学习笔记.md","permalink":"/History/Android注入框架Dagger2学习笔记/","title":"Android注入框架Dagger2学习笔记","tags":["技术","Android","主框架"],"created":"2016-03-06 12:47:07","updated":"2016-03-06 12:47:07"}
+{"dg-publish":true,"dg-path":"History/Android注入框架Dagger2学习笔记.md","permalink":"/History/Android注入框架Dagger2学习笔记/","title":"Android注入框架Dagger2学习笔记","tags":["技术","Android","主框架"],"created":"2016-03-06 12:47:07","updated":"2016-03-06 12:47:07","dg-note-properties":{"title":"Android注入框架Dagger2学习笔记","aliases":[],"tags":["技术","Android","主框架"],"date created":"2016-03-06 12:47:07","date modified":"2016-03-06 12:47:07","status":"Done"}}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Android构架系列之二-MVP&&Clean理解与实践之Clean.md","permalink":"/History/Android构架系列之二-MVP&&Clean理解与实践之Clean/","title":"Android构架系列之二--MVP&&Clean理解与实践之Clean","tags":["技术","Android","主框架"],"created":"2016-05-08 15:40:20","updated":"2016-05-08 15:40:20"}
+{"dg-publish":true,"dg-path":"History/Android构架系列之二-MVP&&Clean理解与实践之Clean.md","permalink":"/History/Android构架系列之二-MVP&&Clean理解与实践之Clean/","title":"Android构架系列之二--MVP&&Clean理解与实践之Clean","tags":["技术","Android","主框架"],"created":"2016-05-08 15:40:20","updated":"2016-05-08 15:40:20","dg-note-properties":{"title":"Android构架系列之二--MVP&&Clean理解与实践之Clean","aliases":[],"tags":["技术","Android","主框架"],"date created":"2016-05-08 15:40:20","date modified":"2016-05-08 15:40:20","status":"Done"}}
 ---
 
 

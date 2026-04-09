@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/版本控制工具git入门实践.md","permalink":"/History/版本控制工具git入门实践/","title":"版本控制工具Git入门实践","tags":["技术","Tools"],"created":"2016-06-25 09:25:19","updated":"2016-06-25 09:25:19"}
+{"dg-publish":true,"dg-path":"History/版本控制工具git入门实践.md","permalink":"/History/版本控制工具git入门实践/","title":"版本控制工具Git入门实践","tags":["技术","Tools"],"created":"2016-06-25 09:25:19","updated":"2016-06-25 09:25:19","dg-note-properties":{"title":"版本控制工具Git入门实践","aliases":[],"tags":["技术","Tools"],"date created":"2016-06-25 09:25:19","date modified":"2016-06-25 09:25:19","status":"Done"}}
 ---
 
 

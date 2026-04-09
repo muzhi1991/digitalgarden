@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"强化学习-Part 1：From MDP to DQN.md","permalink":"/强化学习-Part 1：From MDP to DQN/","title":"强化学习-Part 1：From MDP to DQN","created":"2025-02-01 14:38:26","updated":"2025-02-16 17:50:11"}
+{"dg-publish":true,"dg-path":"强化学习-Part 1：From MDP to DQN.md","permalink":"/强化学习-Part 1：From MDP to DQN/","title":"强化学习-Part 1：From MDP to DQN","created":"2025-02-01 14:38:26","updated":"2025-02-16 17:50:11","dg-note-properties":{"title":"强化学习-Part 1：From MDP to DQN","aliases":null,"tags":null,"status":"Draft","date created":"2025-02-01 14:38:26","date modified":"2025-02-16 17:50:11"}}
 ---
 
 # 强化学习-Part 1：From MDP to DQN
@@ -303,7 +303,7 @@ $$
 
 我们得到了一个利用采样数据迭代求解 state value 的公式：
 * 我们需要的数据是采样的 $\{( s, r, s^{\prime} ) \}$，其实就是 episode 里面的 $\{( s_{t}, r_{t+1}, s_{t+1} ) \}_{t}$
-* 公式里面使用的是 $v_{\pi} ( s_{k}^{\prime} )$ ,要求使用的是实际操策略的 state value，但是我们是不知道的，这里用 $v_{k} ( s_{k}^{\prime} )$ 来替代
+* 公式里面使用的是 $v_{\pi} ( s_{k}^{\prime} )$ ,要求使用的是实际策略的 state value，但是我们是不知道的，这里用 $v_{k} ( s_{k}^{\prime} )$ 来替代
 * **仅更新被访问到的状态**的 state value。我们每一次利用采样数据中 $s_t$ 的 statevalue（即 $v_k(s_t)$ 的值） 被 update，其他状态的 $s$ 值保持不变。
 > 补充：我们一般称上面公式中大括号里的内容为 TD Error，括号内减号后面的部分为 TD Target
 
@@ -525,8 +525,8 @@ $$
 	* 训练的 loss 就是前面介绍的 MSE，做梯度下降更新网络参数
 * 对于 DDQN 结构，每过 $C$ 轮，会同步参数到 target policy 中 $w_T$ 中。
 * 这里的问题是和很多网上的版本相比有一个显著的不同
-	* behavior  policy 生成数据是每一轮迭代完成后使用新的 q function 构造一个ε-greedy 策略（注意：这个策略依赖 q 值！）。基于这个策略再生成新的一批数据放入 replay buffer 里面，然后再 sample batch 数据
-	* 注意：这依然是 off-policy，原因是ε-greedy 是 behavior 策略和 target 策略依然是我们训练的 max greddy 策略。只是他们都依赖到了 q function（这里特指 $q(s,w_T)$!）
+	* behavior policy 生成数据是每一轮迭代完成后使用新的 q function 构造一个ε-greedy 策略（注意：这个策略依赖 q 值！）。基于这个策略再生成新的一批数据放入 replay buffer 里面，然后再 sample batch 数据
+	* 注意：这依然是 off-policy，原因是ε-greedy 是 behavior 策略和 target 策略依然是我们训练的 max greedy 策略。只是他们都依赖到了 q function（这里特指 $q(s,w_T)$!）
 
 ```mermaid
 graph LR

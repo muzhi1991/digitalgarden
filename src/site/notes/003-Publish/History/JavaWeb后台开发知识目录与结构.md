@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/JavaWeb后台开发知识目录与结构.md","permalink":"/History/JavaWeb后台开发知识目录与结构/","title":"JavaWeb后台开发知识目录与结构","tags":["技术","Guide"],"created":"2016-10-05 10:17:00","updated":"2016-10-05 10:17:00"}
+{"dg-publish":true,"dg-path":"History/JavaWeb后台开发知识目录与结构.md","permalink":"/History/JavaWeb后台开发知识目录与结构/","title":"JavaWeb后台开发知识目录与结构","tags":["技术","Guide"],"created":"2016-10-05 10:17:00","updated":"2016-10-05 10:17:00","dg-note-properties":{"title":"JavaWeb后台开发知识目录与结构","aliases":[],"tags":["技术","Guide"],"date created":"2016-10-05 10:17:00","date modified":"2016-10-05 10:17:00","status":"Done"}}
 ---
 
 

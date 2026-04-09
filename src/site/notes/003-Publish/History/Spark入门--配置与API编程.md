@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Spark入门--配置与API编程.md","permalink":"/History/Spark入门--配置与API编程/","title":"Spark入门--配置与API编程","tags":["技术","大数据分析","Spark"],"created":"2017-01-29 16:28:53","updated":"2017-01-29 16:28:53"}
+{"dg-publish":true,"dg-path":"History/Spark入门--配置与API编程.md","permalink":"/History/Spark入门--配置与API编程/","title":"Spark入门--配置与API编程","tags":["技术","大数据分析","Spark"],"created":"2017-01-29 16:28:53","updated":"2017-01-29 16:28:53","dg-note-properties":{"title":"Spark入门--配置与API编程","aliases":[],"tags":["技术","大数据分析","Spark"],"date created":"2017-01-29 16:28:53","date modified":"2017-01-29 16:28:53","status":"Done"}}
 ---
 
 

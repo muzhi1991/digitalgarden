@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/nodejs&&express实践-nodeclub项目分析.md","permalink":"/History/nodejs&&express实践-nodeclub项目分析/","title":"Node.js&&Express实践-nodeclub项目分析","tags":["技术","全栈","javascript","nodejs","实践","后台开发"],"created":"2016-08-28 10:10:10","updated":"2016-08-28 10:10:10"}
+{"dg-publish":true,"dg-path":"History/nodejs&&express实践-nodeclub项目分析.md","permalink":"/History/nodejs&&express实践-nodeclub项目分析/","title":"Node.js&&Express实践-nodeclub项目分析","tags":["技术","全栈","javascript","nodejs","实践","后台开发"],"created":"2016-08-28 10:10:10","updated":"2016-08-28 10:10:10","dg-note-properties":{"title":"Node.js&&Express实践-nodeclub项目分析","aliases":[],"tags":["技术","全栈","javascript","nodejs","实践","后台开发"],"date created":"2016-08-28 10:10:10","date modified":"2016-08-28 10:10:10","status":"Done"}}
 ---
 
 

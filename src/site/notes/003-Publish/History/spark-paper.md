@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/spark-paper.md","permalink":"/History/spark-paper/","title":"Spark论文阅读","tags":["技术","大数据","Spark"],"created":"2018-07-14 18:40:20","updated":"2018-07-14 18:40:20"}
+{"dg-publish":true,"dg-path":"History/spark-paper.md","permalink":"/History/spark-paper/","title":"Spark论文阅读","tags":["技术","大数据","Spark"],"created":"2018-07-14 18:40:20","updated":"2018-07-14 18:40:20","dg-note-properties":{"title":"Spark论文阅读","aliases":[],"tags":["技术","大数据","Spark"],"date created":"2018-07-14 18:40:20","date modified":"2018-07-14 18:40:20","status":"Done"}}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/spark-source-analyse-05.md","permalink":"/History/spark-source-analyse-05/","title":"Spark源码分析-0.5最初版本","tags":["技术","大数据","Spark"],"created":"2018-08-18 15:49:01","updated":"2018-08-18 15:49:01"}
+{"dg-publish":true,"dg-path":"History/spark-source-analyse-05.md","permalink":"/History/spark-source-analyse-05/","title":"Spark源码分析-0.5最初版本","tags":["技术","大数据","Spark"],"created":"2018-08-18 15:49:01","updated":"2018-08-18 15:49:01","dg-note-properties":{"title":"Spark源码分析-0.5最初版本","aliases":[],"tags":["技术","大数据","Spark"],"date created":"2018-08-18 15:49:01","date modified":"2018-08-18 15:49:01","status":"Done"}}
 ---
 
 

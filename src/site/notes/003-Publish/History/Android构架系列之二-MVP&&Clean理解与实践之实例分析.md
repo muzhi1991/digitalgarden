@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Android构架系列之二-MVP&&Clean理解与实践之实例分析.md","permalink":"/History/Android构架系列之二-MVP&&Clean理解与实践之实例分析/","title":"Android构架系列之二--MVP&&Clean理解与实践之实例分析","tags":["技术","Android","主框架"],"created":"2016-05-15 16:45:33","updated":"2016-05-15 16:45:33"}
+{"dg-publish":true,"dg-path":"History/Android构架系列之二-MVP&&Clean理解与实践之实例分析.md","permalink":"/History/Android构架系列之二-MVP&&Clean理解与实践之实例分析/","title":"Android构架系列之二--MVP&&Clean理解与实践之实例分析","tags":["技术","Android","主框架"],"created":"2016-05-15 16:45:33","updated":"2016-05-15 16:45:33","dg-note-properties":{"title":"Android构架系列之二--MVP&&Clean理解与实践之实例分析","aliases":[],"tags":["技术","Android","主框架"],"date created":"2016-05-15 16:45:33","date modified":"2016-05-15 16:45:33","status":"Done"}}
 ---
 
 

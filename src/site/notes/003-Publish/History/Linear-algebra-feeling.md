@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Linear-algebra-feeling.md","permalink":"/History/Linear-algebra-feeling/","title":"Linear-algebra-feeling","tags":["技术","机器学习","数学"],"created":"2018-07-15 19:41:20","updated":"2024-12-14 22:56:39"}
+{"dg-publish":true,"dg-path":"History/Linear-algebra-feeling.md","permalink":"/History/Linear-algebra-feeling/","title":"Linear-algebra-feeling","tags":["技术","机器学习","数学"],"created":"2018-07-15 19:41:20","updated":"2024-12-14 22:56:39","dg-note-properties":{"title":"Linear-algebra-feeling","aliases":[],"tags":["技术","机器学习","数学"],"status":"Done","date created":"2018-07-15 19:41:20","date modified":"2024-12-14 22:56:39"}}
 ---
 
 # Linear-algebra-feeling

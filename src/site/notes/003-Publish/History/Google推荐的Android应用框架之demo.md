@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Google推荐的Android应用框架之demo.md","permalink":"/History/Google推荐的Android应用框架之demo/","title":"Google推荐的Android应用框架之demo","tags":["技术","Android","主框架"],"created":"2016-01-31 16:04:50","updated":"2016-01-31 16:04:50"}
+{"dg-publish":true,"dg-path":"History/Google推荐的Android应用框架之demo.md","permalink":"/History/Google推荐的Android应用框架之demo/","title":"Google推荐的Android应用框架之demo","tags":["技术","Android","主框架"],"created":"2016-01-31 16:04:50","updated":"2016-01-31 16:04:50","dg-note-properties":{"title":"Google推荐的Android应用框架之demo","aliases":[],"tags":["技术","Android","主框架"],"date created":"2016-01-31 16:04:50","date modified":"2016-01-31 16:04:50","status":"Done"}}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/graph-algorithm-community-detection.md","permalink":"/History/graph-algorithm-community-detection/","title":"graph-algorithm-community-detection","tags":["技术","算法","图分析","Spark"],"created":"2019-07-24 15:30:00","updated":"2025-01-09 23:23:09"}
+{"dg-publish":true,"dg-path":"History/graph-algorithm-community-detection.md","permalink":"/History/graph-algorithm-community-detection/","title":"graph-algorithm-community-detection","tags":["技术","算法","图分析","Spark"],"created":"2019-07-24 15:30:00","updated":"2025-01-09 23:23:09","dg-note-properties":{"title":"graph-algorithm-community-detection","aliases":[],"tags":["技术","算法","图分析","Spark"],"status":"Done","date created":"2019-07-24 15:30:00","date modified":"2025-01-09 23:23:09"}}
 ---
 
 # graph-algorithm-community-detection

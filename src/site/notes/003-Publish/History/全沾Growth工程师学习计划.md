@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/全沾Growth工程师学习计划.md","permalink":"/History/全沾Growth工程师学习计划/","title":"全沾Growth工程师学习计划","tags":["技术","Guide"],"created":"2016-07-03 14:14:44","updated":"2016-07-03 14:14:44"}
+{"dg-publish":true,"dg-path":"History/全沾Growth工程师学习计划.md","permalink":"/History/全沾Growth工程师学习计划/","title":"全沾Growth工程师学习计划","tags":["技术","Guide"],"created":"2016-07-03 14:14:44","updated":"2016-07-03 14:14:44","dg-note-properties":{"title":"全沾Growth工程师学习计划","aliases":[],"tags":["技术","Guide"],"date created":"2016-07-03 14:14:44","date modified":"2016-07-03 14:14:44","status":"Done"}}
 ---
 
 

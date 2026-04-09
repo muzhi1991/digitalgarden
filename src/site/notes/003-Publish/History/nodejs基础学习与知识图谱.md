@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/nodejs基础学习与知识图谱.md","permalink":"/History/nodejs基础学习与知识图谱/","title":"Node.js基础学习与知识图谱","tags":["技术","全栈","javascript","nodejs","后台开发"],"created":"2016-08-07 16:10:40","updated":"2016-08-07 16:10:40"}
+{"dg-publish":true,"dg-path":"History/nodejs基础学习与知识图谱.md","permalink":"/History/nodejs基础学习与知识图谱/","title":"Node.js基础学习与知识图谱","tags":["技术","全栈","javascript","nodejs","后台开发"],"created":"2016-08-07 16:10:40","updated":"2016-08-07 16:10:40","dg-note-properties":{"title":"Node.js基础学习与知识图谱","aliases":[],"tags":["技术","全栈","javascript","nodejs","后台开发"],"date created":"2016-08-07 16:10:40","date modified":"2016-08-07 16:10:40","status":"Done"}}
 ---
 
 

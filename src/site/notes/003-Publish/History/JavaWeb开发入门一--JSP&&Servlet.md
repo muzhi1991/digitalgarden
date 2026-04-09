@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/JavaWeb开发入门一--JSP&&Servlet.md","permalink":"/History/JavaWeb开发入门一--JSP&&Servlet/","title":"JavaWeb开发入门一--JSP&&Servlet","tags":["技术","JavaWeb","后端"],"created":"2016-10-08 12:17:00","updated":"2016-10-08 12:17:00"}
+{"dg-publish":true,"dg-path":"History/JavaWeb开发入门一--JSP&&Servlet.md","permalink":"/History/JavaWeb开发入门一--JSP&&Servlet/","title":"JavaWeb开发入门一--JSP&&Servlet","tags":["技术","JavaWeb","后端"],"created":"2016-10-08 12:17:00","updated":"2016-10-08 12:17:00","dg-note-properties":{"title":"JavaWeb开发入门一--JSP&&Servlet","aliases":[],"tags":["技术","JavaWeb","后端"],"date created":"2016-10-08 12:17:00","date modified":"2016-10-08 12:17:00","status":"Done"}}
 ---
 
 

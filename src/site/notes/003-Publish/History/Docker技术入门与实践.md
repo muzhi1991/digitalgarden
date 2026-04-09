@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"History/Docker技术入门与实践.md","permalink":"/History/Docker技术入门与实践/","title":"常见Web架构与Docker部署实践","tags":["技术","全栈","运维"],"created":"2016-09-20 16:00:12","updated":"2016-09-20 16:00:12"}
+{"dg-publish":true,"dg-path":"History/Docker技术入门与实践.md","permalink":"/History/Docker技术入门与实践/","title":"常见Web架构与Docker部署实践","tags":["技术","全栈","运维"],"created":"2016-09-20 16:00:12","updated":"2016-09-20 16:00:12","dg-note-properties":{"title":"常见Web架构与Docker部署实践","aliases":[],"tags":["技术","全栈","运维"],"date created":"2016-09-20 16:00:12","date modified":"2016-09-20 16:00:12","status":"Done"}}
 ---
 
 
